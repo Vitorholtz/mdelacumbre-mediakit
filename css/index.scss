@@ -1,7 +1,12 @@
-//variables and funcionts
-@import 'variables';
+// Colors
+@import 'variables/colors';
 
-// base and layout
+// Typography
+@import 'variables/typography-styles';
+
+// Base and layout
 @import 'global';
 
-@import 'Components/primary-button'
+// Components
+@import 'Components/primary-button';
+@import 'Components/test-container';

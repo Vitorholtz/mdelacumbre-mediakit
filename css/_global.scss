@@ -1,11 +1,51 @@
-/* reset styles */
+// fonts - MERRIWEATHER
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('/assets/fonts/merriweather/merriweather-black-webfont.woff2') format('woff2'),
+         url('/assets/fonts/merriweather/merriweather-black-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('/assets/fonts/merriweather/merriweather-bold-webfont.woff2') format('woff2'),
+         url('/assets/fonts/merriweather/merriweather-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('/assets/fonts/merriweather/merriweather-regular-webfont.woff2') format('woff2'),
+         url('/assets/fonts/merriweather/merriweather-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('/assets/fonts/merriweather/merriweather-light-webfont.woff2') format('woff2'),
+         url('/assets/fonts/merriweather/merriweather-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+
+// Global styles
+
 * {
   color: inherit;
   margin: 0;
 }
 
 body {
-  font-family: 'Kanit', sans-serif;
+  font-family: sans-serif;
   background-color: $md-black;
 }
 

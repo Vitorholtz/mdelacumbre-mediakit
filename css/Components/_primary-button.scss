@@ -6,13 +6,13 @@
     gap: 4px;
     border-radius: 2px;
     border: 2px solid $md-accent-yellow;
-    background: rgba(13, 17, 23, 0.64);
+    background: rgba(13, 17, 23, 0.64);;
     backdrop-filter: blur(4px);
     color: $md-white;
-    font-family: inherit;
+    font-family: 'Merriweather';
     font-size: 20px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 900;
     line-height: 28px;
     transition: .2s ease;
     cursor: pointer;
@@ -20,6 +20,6 @@
     &:hover {
         background-color: $md-accent-yellow;
         color: $md-black;
-        font-weight: 500;
+        font-weight: 900;
     }
 }

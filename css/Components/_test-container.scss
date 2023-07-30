@@ -1,0 +1,27 @@
+
+.test-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    max-width: 600px;
+    padding: 32px;
+    border: 1px red solid;
+    margin: 10% auto;
+
+    h1 {
+        @include Merriweather--Display-light;
+        color: $md-white;
+    }
+
+    .text {
+        color: $md-offwhhite;
+        font-family: "Merriweather";
+        font-size: 20px;
+        font-weight: 300;
+        text-align: center;
+        line-height: 36px;
+
+    }
+}
