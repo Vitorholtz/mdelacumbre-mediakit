@@ -1,0 +1,25 @@
+.primary-button {
+    display: inline-flex;
+    padding: 16px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 2px;
+    border: 2px solid $md-accent-yellow;
+    background: rgba(13, 17, 23, 0.64);
+    backdrop-filter: blur(4px);
+    color: $md-white;
+    font-family: inherit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    transition: .2s ease;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $md-accent-yellow;
+        color: $md-black;
+        font-weight: 500;
+    }
+}
