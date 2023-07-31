@@ -7,3 +7,200 @@
     font-size: 32px;
     line-height: 56px;
 }
+
+@mixin Merriweather--Display-regular{
+    font-family: "Merriweather";
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 56px;
+}
+
+@mixin Merriweather--Display-bold{
+    font-family: "Merriweather";
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 56px;
+}
+
+
+@mixin Merriweather--Display-extrabold{
+    font-family: "Merriweather";
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 56px;
+}
+
+
+@mixin Merriweather--Display2-light{
+    font-family: "Merriweather";
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+@mixin Merriweather--Display2-regular{
+    font-family: "Merriweather";
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+@mixin Merriweather--Display2-bold{
+    font-family: "Merriweather";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+
+@mixin Merriweather--body2-light{
+    font-family: "Merriweather";
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 36px;
+}
+
+@mixin Merriweather--body2-regular{
+    font-family: "Merriweather";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 36px;
+}
+
+@mixin Merriweather--body2-bold{
+    font-family: "Merriweather";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+}
+
+@mixin Merriweather--body-light{
+    font-family: "Merriweather";
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+@mixin Merriweather--body-regular{
+    font-family: "Merriweather";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+@mixin Merriweather--body-bold{
+    font-family: "Merriweather";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+@mixin Merriweather--caption-light{
+    font-family: "Merriweather";
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+@mixin Merriweather--caption-regular{
+    font-family: "Merriweather";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+// Kanit
+
+@mixin Kanit--h1-light{
+    font-family: "Kanit";
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: -0.48px;
+    
+}
+
+@mixin Kanit--h1-bold{
+    font-family: "Kanit";
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: -0.48px;
+}
+
+@mixin Kanit--h2-light{
+    font-family: "Kanit";
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 52px;
+}
+
+@mixin Kanit--h2-bold{
+    font-family: "Kanit";
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 52px;
+}
+
+@mixin Kanit--h3-light{
+    font-family: "Kanit";
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 40px;
+}
+
+@mixin Kanit--h3-bold{
+    font-family: "Kanit";
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+}
+
+@mixin Kanit--h4-light{
+    font-family: "Kanit";
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 34px;
+}
+
+@mixin Kanit--h4-bold{
+    font-family: "Kanit";
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 34px;
+}
+
+@mixin Kanit--body2-light{
+    font-family: "Kanit";
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+@mixin Kanit--body2-bold{
+    font-family: "Kanit";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+@mixin Kanit--body-light{
+    font-family: "Kanit";
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+@mixin Kanit--body-highlight{
+    font-family: "Kanit";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+@mixin Kanit--body-bold{
+    font-family: "Kanit";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}

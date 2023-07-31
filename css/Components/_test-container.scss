@@ -1,27 +1,26 @@
 
 .test-container {
-    display: flex;
+    display: block;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 24px;
     max-width: 600px;
     padding: 32px;
-    border: 1px red solid;
+    border: 1px rgba(255, 255, 255, 0.315) solid;
     margin: 10% auto;
+    border-radius: 4px;
 
     h1 {
-        @include Merriweather--Display-light;
+        @include Kanit--h1-bold;
+        margin-bottom: 28px;
         color: $md-white;
     }
 
     .text {
+        @include Merriweather--body2-light;
         color: $md-offwhhite;
-        font-family: "Merriweather";
-        font-size: 20px;
-        font-weight: 300;
-        text-align: center;
-        line-height: 36px;
-
+        text-align: left;
+        margin-bottom: 32px;
     }
 }
