@@ -1,0 +1,42 @@
+@use "../abstracts" as *;
+
+// Base styles
+
+* {
+  color: inherit;
+  margin: 0;
+}
+
+html {
+  ::-moz-selection { /* Code for Firefox */
+    color: $md-black;
+    background: $md-accent-yellow;
+  }
+  ::selection {
+    color: $md-black;
+    background: $md-accent-yellow;
+  }
+}
+
+body {
+  font-family: sans-serif;
+  background-color: $md-black;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  border: 0;
+  border-top: 1px dotted #efefef;
+}
+
+img {
+  max-width: 100%;
+}
