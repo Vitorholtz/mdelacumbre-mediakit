@@ -1,4 +1,4 @@
-@use "../abstracts" as *;
+@use "../styles" as *;
 
 // Base styles
 
@@ -16,11 +16,13 @@ html {
     color: $md-black;
     background: $md-accent-yellow;
   }
+  font-size: 62.5%;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: Helvetica, Sans-serif;
   background-color: $md-black;
+  font-size: 1.6rem;
 }
 
 ul {
