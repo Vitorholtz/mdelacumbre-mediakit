@@ -1,110 +1,110 @@
-// Merriweather
+// Merriweather 
 
 @mixin Merriweather--Display-light{
     font-family: "Merriweather";
     font-weight: 300;
-    font-size: 32px;
-    line-height: 56px;
+    font-size: 3.2rem;
+    line-height: 1.75;
 }
 
 @mixin Merriweather--Display-regular{
     font-family: "Merriweather";
     font-weight: 400;
-    font-size: 32px;
-    line-height: 56px;
+    font-size: 3.2rem;
+    line-height: 1.75;
 }
 
 @mixin Merriweather--Display-bold{
     font-family: "Merriweather";
     font-weight: 700;
-    font-size: 32px;
-    line-height: 56px;
+    font-size: 3.2rem;
+    line-height: 1.75;
 }
 
 
 @mixin Merriweather--Display-extrabold{
     font-family: "Merriweather";
     font-weight: 900;
-    font-size: 32px;
-    line-height: 56px;
+    font-size: 3.2rem;
+    line-height: 1.75;
 }
 
 
 @mixin Merriweather--Display2-light{
     font-family: "Merriweather";
     font-weight: 300;
-    font-size: 24px;
-    line-height: 40px;
+    font-size: 2.4rem;
+    line-height: 1.65;
 }
 
 @mixin Merriweather--Display2-regular{
     font-family: "Merriweather";
     font-weight: 400;
-    font-size: 24px;
-    line-height: 40px;
+    font-size: 2.4rem;
+    line-height: 1.65;
 }
 
 @mixin Merriweather--Display2-bold{
     font-family: "Merriweather";
     font-weight: 700;
-    font-size: 24px;
-    line-height: 40px;
+    font-size: 2.4rem;
+    line-height: 1.65;
 }
 
 @mixin Merriweather--body2-light{
     font-family: "Merriweather";
     font-weight: 300;
-    font-size: 20px;
-    line-height: 36px;
+    font-size: 2.0rem;
+    line-height: 1.8;
 }
 
 @mixin Merriweather--body2-regular{
     font-family: "Merriweather";
     font-weight: 400;
-    font-size: 20px;
-    line-height: 36px;
+    font-size: 2.0rem;
+    line-height: 1.8;
 }
 
 @mixin Merriweather--body2-bold{
     font-family: "Merriweather";
     font-weight: 700;
-    font-size: 20px;
-    line-height: 36px;
+    font-size: 2.0rem;
+    line-height: 1.8;
 }
 
 @mixin Merriweather--body-light{
     font-family: "Merriweather";
     font-weight: 300;
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 1.6rem;
+    line-height: 1.75;
 }
 
 @mixin Merriweather--body-regular{
     font-family: "Merriweather";
     font-weight: 400;
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 1.6rem;
+    line-height: 1.75;
 }
 
 @mixin Merriweather--body-bold{
     font-family: "Merriweather";
     font-weight: 700;
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 1.6rem;
+    line-height: 1.75;
 }
 
 @mixin Merriweather--caption-light{
     font-family: "Merriweather";
     font-weight: 300;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 1.4rem;
+    line-height: 1.7;
 }
 
 @mixin Merriweather--caption-regular{
     font-family: "Merriweather";
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1.6rem;
+    line-height: 1.7;
 }
 
 // Kanit
@@ -112,93 +112,93 @@
 @mixin Kanit--h1-light{
     font-family: "Kanit";
     font-weight: 300;
-    font-size: 48px;
-    line-height: 64px;
-    letter-spacing: -0.48px;
+    font-size: 4.8rem;
+    line-height: 1.34;
+    letter-spacing: -0.4.8rem;
     
 }
 
 @mixin Kanit--h1-bold{
     font-family: "Kanit";
     font-weight: 500;
-    font-size: 48px;
-    line-height: 64px;
-    letter-spacing: -0.48px;
+    font-size: 4.8rem;
+    line-height: 1.34;
+    letter-spacing: -0.4.8rem;
 }
 
 @mixin Kanit--h2-light{
     font-family: "Kanit";
     font-weight: 300;
-    font-size: 36px;
-    line-height: 52px;
+    font-size: 3.6rem;
+    line-height: 1.45;
 }
 
 @mixin Kanit--h2-bold{
     font-family: "Kanit";
     font-weight: 500;
-    font-size: 36px;
-    line-height: 52px;
+    font-size: 3.6rem;
+    line-height: 1.45;
 }
 
 @mixin Kanit--h3-light{
     font-family: "Kanit";
     font-weight: 300;
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 3.2rem;
+    line-height: 1.25;
 }
 
 @mixin Kanit--h3-bold{
     font-family: "Kanit";
     font-weight: 500;
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 3.2rem;
+    line-height: 1.25;
 }
 
 @mixin Kanit--h4-light{
     font-family: "Kanit";
     font-weight: 300;
-    font-size: 24px;
-    line-height: 34px;
+    font-size: 2.4rem;
+    line-height: 1.41;
 }
 
 @mixin Kanit--h4-bold{
     font-family: "Kanit";
     font-weight: 500;
-    font-size: 24px;
-    line-height: 34px;
+    font-size: 2.4rem;
+    line-height: 1.41;
 }
 
 @mixin Kanit--body2-light{
     font-family: "Kanit";
     font-weight: 300;
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 2rem;
+    line-height: 1.6;
 }
 
 @mixin Kanit--body2-bold{
     font-family: "Kanit";
     font-weight: 500;
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 2rem;
+    line-height: 1.6;
 }
 
 @mixin Kanit--body-light{
     font-family: "Kanit";
     font-weight: 300;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1.6rem;
+    line-height: 1.75;
 }
 
 @mixin Kanit--body-highlight{
     font-family: "Kanit";
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1.6rem;
+    line-height: 1.75;
 }
 
 @mixin Kanit--body-bold{
     font-family: "Kanit";
     font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1.6rem;
+    line-height: 1.75;
 }
