@@ -21,8 +21,14 @@ html {
 
 body {
   font-family: Helvetica, Sans-serif;
-  background-color: $md-black;
+  background-color: #222830;
+  // background-image: url(/assets/images/bg-test.jpeg);
+  // background-position: center;
+  // background-size: 100%;
+  color: $md-white;
   font-size: 1.6rem;
+  //ver o que é isso
+  -webkit-font-smoothing: antialiased;
 }
 
 ul {

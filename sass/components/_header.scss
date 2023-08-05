@@ -1,0 +1,133 @@
+@use "../styles" as *;
+
+.md-header {
+    position: fixed;
+    width: 100vw;
+    padding: 16px 0px;
+    background: linear-gradient(180deg, #0D1117 0%, rgba(13, 17, 23, 0.00) 100%);
+    backdrop-filter: blur(6px);
+    transition: .3s ease;
+
+    &--mobile {
+        height: 100vh;
+        background-color: red;
+    }
+
+    .header-content-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1520px;
+        padding: 0 20px;
+        margin: auto;
+
+        .social-media-links {
+            display: flex;
+
+            .sm-link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                height: 40px;
+                border-radius: 100px;
+                transition: .2s ease-in;
+
+                &:hover {
+                    filter: invert(0.3) sepia(0.5) saturate(20) hue-rotate(0deg) brightness(1.08);
+                }
+            }
+        }
+
+        .header-nav-bar {
+            display: flex;
+            gap: 40px;
+
+            .nav-item {
+                @include Merriweather--body-light;
+                color: $md-offwhite;
+                transition: all 0.2s linear;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    height: 2px;
+                    width: 6px;
+                    background-color: $md-accent-yellow;
+                    opacity: 0;
+                    transition: all 0.2s linear;
+                }
+
+                &:hover::after {
+                    width: 50%;
+                    opacity: 1;
+                }
+
+                &:hover {
+                    color: $md-white;
+                }
+            }
+            @include lg {
+                display: none;
+              }
+        }
+
+        .mobile-menu-toggle {
+            display: flex;
+            gap: 2px;
+            width: 40px;
+            height: 40px;
+            grid-row-gap: 6px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            display: none;
+
+            .nav-toggle-line {
+                width: 24px;
+                height: 2px;
+                background-color: $md-white;
+                transition: .2s ease;
+            }
+            ._1 {
+                transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+            }
+            ._2 {
+                transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+            }
+            ._3{
+                transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+            }
+
+              &--active {
+                ._1 {
+                    transform: translate3d(0px, 8px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(-45deg) skew(0deg, 0deg);
+                    transform-style: preserve-3d;
+                }
+                ._2 {
+                    transform: translate3d(0px, 0px, 0px) scale3d(0, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                    transform-style: preserve-3d;
+                }
+                ._3{
+                    transform: translate3d(0px, -8px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(45deg) skew(0deg, 0deg);
+                    transform-style: preserve-3d;
+                }
+              }
+
+              @include lg {
+                display: flex;
+              }
+        }
+    }
+}
+
+.text-container {
+    max-width: 1520px;
+    margin: auto;
+    @include Merriweather--body2-light;
+    padding: 80px 20px 0 20px;
+}
+
