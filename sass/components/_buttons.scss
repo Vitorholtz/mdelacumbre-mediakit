@@ -1,0 +1,129 @@
+@use "../styles" as *;
+
+// Primary button
+
+.primary-button {
+    position: relative;
+    @include Kanit--body2-bold;
+    display: inline-flex;
+    padding: 16px 24px;
+    align-items: center;
+    border-radius: 1px;
+    box-shadow: $md-accent-yellow 0px 0px 0px 1px;
+    background: #ffbc1400;
+    backdrop-filter: blur(4px);
+    color: $md-white;
+    transition: all .2s ease;
+    overflow: hidden;
+    cursor: pointer;
+
+    .btn__content{
+        z-index: 1;
+    }
+
+    .btn__slide {
+        display: block;
+        position: absolute;
+        top: 0; bottom: -1px; left: -10px;
+        width: 0;
+        background-color: $md-accent-yellow;
+        transform: skew(-15deg);
+        transition: all .2s ease;
+      }
+
+    &:hover {
+        color: $md-black;
+        .btn__slide{
+            width: calc(110% + 15px);
+        }
+    }
+
+    &:active {
+        .btn__slide{
+            background: rgba(0, 0, 0, 0);
+        }
+        .btn__content{
+            color: $md-white;
+        }
+    }
+    
+    @include xl {
+        @include Kanit--body-bold;
+        padding: 12px 20px;
+      }
+}
+
+// Secondary button
+
+.secondary-button {
+    @include Kanit--body2-bold;
+    display: inline-flex;
+    padding: 16px 24px;
+    align-items: center;
+    gap: 6px;
+    border-radius: 1px;
+    box-shadow: $md-gray 0px 0px 0px 1px;
+    background: #ffbc1400;
+    backdrop-filter: blur(4px);
+    color: $md-white;
+    transition: all .2s ease;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: $md-white 0px 0px 0px 2px;
+        background: rgba(40, 48, 61, 0.64);
+
+        #arrow-down-right {
+            transform: rotate(45deg);
+        }
+    }
+
+    &:active {
+        background: #00000000;
+    }
+    
+    @include xl {
+        @include Kanit--body-bold;
+        padding: 12px 20px;
+        gap: 4px;
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+      }
+}
+
+
+// Tertiary button
+
+.tertiary-button {
+    @include Kanit--body-highlight;
+    display: inline-flex;
+    padding: 6px 16px;
+    align-items: center;
+    gap: 6px;
+    border-radius: 4px;
+    background: #00000000;
+    box-shadow: #84868a70 0px 0px 0px 1px;
+    backdrop-filter: blur(4px);
+    transition: all .5s ease;
+    cursor: pointer;
+
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    &:hover {
+        background: #0d111749;
+        box-shadow: $md-accent-yellow 0px 0px 0px 1px;
+
+        #download-icon {
+            transform: translateY(2px);
+        }
+    }
+
+}
+

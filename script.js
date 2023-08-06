@@ -7,3 +7,5 @@ menuToggle.addEventListener('click', () => {
 })
 
 window.onload
+
+feather.replace()

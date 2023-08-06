@@ -1,0 +1,75 @@
+@use "../styles" as *;
+
+.md-hero {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-image:radial-gradient(78.84% 78.84% at 50.00% 21.16%, rgba(13, 17, 23, 0.00) 0%, #0D1117 100%);
+
+    .bg-video {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    .hero-cta-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 480px;
+        margin: auto;
+
+        @include xl {
+            max-width: 445px;
+            padding: 0 20px
+          }
+
+        .md-logo {
+            max-width: 460px;
+
+            @include xl {
+                max-width: 100%;
+                padding: 0 20px
+              }
+        }
+
+        .hero-subtitle {
+            @include Merriweather--body2-light;
+            margin-top: 16px;
+            text-align: center;
+            max-width: 360px;
+
+            @include lg {
+                @include Merriweather--body-light;
+              }
+        }
+
+        .btn-container {
+            margin-top: 32px;
+            display: flex;
+            gap: 32px;
+
+            @include xl {
+                margin-top: 24px;
+                gap: 24px;
+              }
+        }
+    }
+}
+
+@media (min-aspect-ratio:16/9) {
+    .bg-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio:16/9) {
+    .bg-video {
+        width: auto;
+        height: 100%;
+    }
+}

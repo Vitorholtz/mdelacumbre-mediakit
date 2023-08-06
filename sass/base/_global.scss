@@ -21,10 +21,11 @@ html {
 
 body {
   font-family: Helvetica, Sans-serif;
-  background-color: #222830;
-  // background-image: url(/assets/images/bg-test.jpeg);
+  background-color: $md-black;
+  // background-image: url(/assets/images/patagonia.jpg);
   // background-position: center;
-  // background-size: 100%;
+  // background-size: cover;
+  // background-repeat: no-repeat;
   color: $md-white;
   font-size: 1.6rem;
   //ver o que é isso
@@ -47,4 +48,8 @@ hr {
 
 img {
   max-width: 100%;
+}
+
+svg {
+  transition: all .2s ease;
 }

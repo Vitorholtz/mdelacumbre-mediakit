@@ -2,12 +2,14 @@
 
 .md-header {
     position: fixed;
+    top: 0;
     width: 100vw;
     height: 72px;
     padding: 16px 0px;
     background: linear-gradient(180deg, #0D1117 0%, rgba(13, 17, 23, 0.00) 100%);
     backdrop-filter: blur(6px);
-    transition: .3s ease;
+    transition: all .3s ease;
+    z-index: 100;
 
     .header-content-container{
         display: flex;
@@ -16,6 +18,10 @@
         max-width: 1520px;
         padding: 0 20px;
         margin: auto;
+
+        @include xl {
+            max-width: 1120px;
+          }
 
         .social-media-links {
             display: flex;
@@ -27,7 +33,7 @@
                 width: 40px;
                 height: 40px;
                 border-radius: 100px;
-                transition: .2s ease-in;
+                transition: all .2s ease-in;
 
                 &:hover {
                     filter: invert(0.3) sepia(0.5) saturate(20) hue-rotate(0deg) brightness(1.08);
@@ -37,6 +43,7 @@
 
         .header-nav-bar {
             display: flex;
+            align-items: baseline;
             gap: 40px;
 
             .nav-item {
@@ -119,9 +126,10 @@
         }
     }
 
-    .mobile-nav-menu-active {
+    .mobile-nav-menu {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 24px;
         margin-top: 32px;
         padding: 0px 20px;
@@ -136,6 +144,7 @@
         }
 
         .header-nav-bar--mobile {
+            width: 100%;
             .m-nav-item {
                 @include Kanit--body2-bold;
                 display: flex;
@@ -155,18 +164,38 @@
         background: #0d1117d5;;
         backdrop-filter: blur(6px);
 
-        .mobile-nav-menu-active { 
+        .mobile-nav-menu{ 
             opacity: 1;
             top: 0;
-            animation: smoothshow 1s;
+            animation: smoothshow 1s backwards;
         }
     }
 }
 
-.text-container {
-    max-width: 1520px;
-    margin: auto;
-    @include Merriweather--body2-light;
-    padding: 80px 20px 0 20px;
+
+//Container de teste
+
+.test-container {
+    max-width: 600px;
+    padding: 32px;
+    margin: 180px auto 0 auto;
+    border: 1px rgba(126, 127, 134, 0.664) solid;
+
+    h1 {
+
+        @include Kanit--h1-bold;
+        margin-bottom: 24px
+    }
+
+    p {
+        @include Merriweather--body2-light;
+    }
+
+    .btn-container {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        margin-top: 32px;
+    }
 }
 
