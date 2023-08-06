@@ -74,7 +74,7 @@
         box-shadow: $md-white 0px 0px 0px 2px;
         background: rgba(40, 48, 61, 0.64);
 
-        #arrow-down-right {
+        .arrow-down-right {
             transform: rotate(45deg);
         }
     }
@@ -120,7 +120,7 @@
         background: #0d111749;
         box-shadow: $md-accent-yellow 0px 0px 0px 1px;
 
-        #download-icon {
+        .download-icon {
             transform: translateY(2px);
         }
     }

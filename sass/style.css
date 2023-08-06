@@ -162,6 +162,20 @@ select {
     opacity: 1;
   }
 }
+@keyframes hero-arrow-down {
+  0% {
+    transform: translateY(-3rem);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(2rem);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(6rem);
+    opacity: 0;
+  }
+}
 * {
   color: inherit;
   margin: 0;
@@ -287,7 +301,7 @@ svg {
   box-shadow: #ffffff 0px 0px 0px 2px;
   background: rgba(40, 48, 61, 0.64);
 }
-.secondary-button:hover #arrow-down-right {
+.secondary-button:hover .arrow-down-right {
   transform: rotate(45deg);
 }
 .secondary-button:active {
@@ -333,7 +347,7 @@ svg {
   background: rgba(13, 17, 23, 0.2862745098);
   box-shadow: #FFBD14 0px 0px 0px 1px;
 }
-.tertiary-button:hover #download-icon {
+.tertiary-button:hover .download-icon {
   transform: translateY(2px);
 }
 
@@ -531,10 +545,10 @@ svg {
 
 .md-hero {
   position: relative;
-  display: flex;
   width: 100%;
   height: 100vh;
   background-image: radial-gradient(78.84% 78.84% at 50% 21.16%, rgba(13, 17, 23, 0) 0%, #0D1117 100%);
+  overflow: hidden;
 }
 .md-hero .bg-video {
   position: absolute;
@@ -548,22 +562,21 @@ svg {
   justify-content: center;
   align-items: center;
   max-width: 480px;
+  padding: 180px 20px 80px 20px;
   margin: auto;
 }
 @media (max-width: 1380px) {
   .md-hero .hero-cta-container {
-    max-width: 445px;
-    padding: 0 20px;
+    max-width: 400px;
+  }
+}
+@media (max-width: 960px) {
+  .md-hero .hero-cta-container {
+    padding-top: 120px;
   }
 }
 .md-hero .hero-cta-container .md-logo {
-  max-width: 460px;
-}
-@media (max-width: 1380px) {
-  .md-hero .hero-cta-container .md-logo {
-    max-width: 100%;
-    padding: 0 20px;
-  }
+  max-width: 100%;
 }
 .md-hero .hero-cta-container .hero-subtitle {
   font-family: "Merriweather";
@@ -591,6 +604,28 @@ svg {
   .md-hero .hero-cta-container .btn-container {
     margin-top: 24px;
     gap: 24px;
+  }
+}
+.md-hero .hero-content-indicator {
+  max-width: 1520px;
+  display: flex;
+  justify-content: left;
+  padding: 0 20px;
+  margin: auto;
+}
+.md-hero .hero-content-indicator .arrow-down-icon {
+  width: 32px;
+  height: 32px;
+  animation: hero-arrow-down 1s infinite ease-in-out;
+}
+@media (max-width: 1380px) {
+  .md-hero .hero-content-indicator {
+    max-width: 1120px;
+  }
+}
+@media (max-width: 960px) {
+  .md-hero .hero-content-indicator {
+    justify-content: center;
   }
 }
 
