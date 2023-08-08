@@ -67,18 +67,29 @@
         height: 460px;
         object-fit: cover;
 
+        &--mobile {
+          display: none;
+
+          @include lg {
+            display: block;
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+          }
+
+          @include md {
+            height: 160px;
+          }
+
+        }
+
         @include xl {
             width: 480px;
             height: 300px;
           }
 
           @include lg {
-            width: 100%;
-            height: 260px;
-          }
-
-          @include md {
-            height: 160px;
+            display: none;
           }
     }
 }

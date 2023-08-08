@@ -7,12 +7,17 @@
     background-image:radial-gradient(78.84% 78.84% at 50.00% 21.16%, rgba(13, 17, 23, 0.00) 0%, #0D1117 100%);
     overflow: hidden;
 
+    @media (max-height:480px) {
+      height: inherit;
+    }
+    
     @include lg {
-        height: 72vh;
+        height: auto;
       }
 
       @include sm {
-        height: 100vh;
+        height: 88vh;
+        overflow: visible;
       }
 
     .bg-video {
@@ -20,6 +25,11 @@
         right: 0;
         bottom: 0;
         z-index: -1;
+
+        @media (max-height:480px) {
+          top: 0;
+          width: fit-content;
+        }
     }
 
     .hero-cta-container {
@@ -30,6 +40,10 @@
         max-width: 480px;
         padding: 180px 20px 80px 20px;
         margin: auto;
+
+        @media (max-height:480px) {
+          padding-top: 96px;
+        }
 
         @include xl {
             max-width: 400px;
