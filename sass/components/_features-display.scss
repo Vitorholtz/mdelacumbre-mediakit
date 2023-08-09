@@ -1,0 +1,92 @@
+@use "../styles" as *;
+
+
+.feature-display-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 96px;
+    max-width: 1520px;
+    padding: 0px 20px 0px 20px;
+    margin: auto;
+
+    @include xl {
+        gap: 64px;
+      }
+
+      @include md {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        justify-content: left;
+        text-wrap: nowrap;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+    .feature-capsule {
+        display: flex;
+        align-items: baseline;
+
+        &:hover {
+            .arrow-down-right {
+                transform: rotate(45deg);
+            }
+            .feature-icon{
+                stroke: $md-accent-yellow;
+            }
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+    
+            .feature-icon {
+                width: 78px;
+                height: 78px;
+                stroke-width: .7;
+
+                @include xl {
+                    width: 52px;
+                    height: 52px;
+                  }
+            }
+    
+            .feature-info {
+                display: flex;
+                flex-direction: column;
+    
+                .upper-info {
+                    @include Kanit--h4-light;
+                    font-weight: 200;
+                    line-height: 1.1;
+
+                    @include xl {
+                        @include Kanit--body2-light;
+                        line-height: 1.1;
+                      }
+                }
+                .bottom-info {
+                    @include Kanit--h1-light;
+                    line-height: 1.1;
+
+                    @include xl {
+                        @include Kanit--h2-light;
+                        line-height: 1.1;
+                      }
+                }
+            }
+        }
+
+        .arrow-down-right {
+            width: 48px;
+            height: 48px;
+            stroke-width: 1;
+
+            @include xl {
+                width: 40px;
+                height: 40px;
+              }
+        }
+    }
+}

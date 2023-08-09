@@ -171,31 +171,3 @@
         }
     }
 }
-
-
-//Container de teste
-
-.test-container {
-    max-width: 600px;
-    padding: 32px;
-    margin: 180px auto 0 auto;
-    border: 1px rgba(126, 127, 134, 0.664) solid;
-
-    h1 {
-
-        @include Kanit--h1-bold;
-        margin-bottom: 24px
-    }
-
-    p {
-        @include Merriweather--body2-light;
-    }
-
-    .btn-container {
-        display: flex;
-        align-items: center;
-        gap: 24px;
-        margin-top: 32px;
-    }
-}
-

@@ -49,3 +49,45 @@ img {
 svg {
   transition: all .2s ease;
 }
+
+.section-title {
+  @include Kanit--h1-bold;
+  max-width: 1520px;
+  padding: 200px 20px 80px 20px;
+  margin: auto;
+  text-align: center;
+
+  @include xl {
+    @include Kanit--h2-bold;
+    padding-top: 160px;
+    padding-bottom: 56px;
+  }
+
+  @include xl {
+    padding-bottom: 40px;
+    text-align: left;
+  }
+}
+
+// Custom scroll
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $md-black; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $md-white; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $md-accent-yellow; 
+}
