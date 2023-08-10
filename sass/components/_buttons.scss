@@ -6,8 +6,9 @@
     position: relative;
     @include Kanit--body2-bold;
     display: inline-flex;
-    padding: 16px 24px;
     align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
     border-radius: 1px;
     box-shadow: $md-accent-yellow 0px 0px 0px 1px;
     background: #ffbc1400;
@@ -58,8 +59,9 @@
 .secondary-button {
     @include Kanit--body2-bold;
     display: inline-flex;
-    padding: 16px 24px;
     align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
     gap: 6px;
     border-radius: 1px;
     box-shadow: $md-gray 0px 0px 0px 1px;
@@ -101,8 +103,9 @@
 .tertiary-button {
     @include Kanit--body-highlight;
     display: inline-flex;
-    padding: 6px 16px;
     align-items: center;
+    justify-content: center;
+    padding: 6px 16px;
     gap: 6px;
     border-radius: 4px;
     background: #00000000;

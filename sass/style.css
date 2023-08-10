@@ -232,6 +232,9 @@ svg {
   max-width: 1520px;
   padding: 200px 20px 80px 20px;
   margin: auto;
+  text-align: left;
+}
+.section-title--center {
   text-align: center;
 }
 @media (max-width: 1380px) {
@@ -240,11 +243,12 @@ svg {
     font-weight: 500;
     font-size: 3.6rem;
     line-height: 1.45;
+    max-width: 1120px;
     padding-top: 160px;
     padding-bottom: 56px;
   }
 }
-@media (max-width: 1380px) {
+@media (max-width: 720px) {
   .section-title {
     padding-bottom: 40px;
     text-align: left;
@@ -279,8 +283,9 @@ svg {
   font-size: 2rem;
   line-height: 1.6;
   display: inline-flex;
-  padding: 16px 24px;
   align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
   border-radius: 1px;
   box-shadow: #FFBD14 0px 0px 0px 1px;
   background: rgba(255, 188, 20, 0);
@@ -333,8 +338,9 @@ svg {
   font-size: 2rem;
   line-height: 1.6;
   display: inline-flex;
-  padding: 16px 24px;
   align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
   gap: 6px;
   border-radius: 1px;
   box-shadow: #84868A 0px 0px 0px 1px;
@@ -377,8 +383,9 @@ svg {
   font-size: 1.6rem;
   line-height: 1.75;
   display: inline-flex;
-  padding: 6px 16px;
   align-items: center;
+  justify-content: center;
+  padding: 6px 16px;
   gap: 6px;
   border-radius: 4px;
   background: rgba(0, 0, 0, 0);
@@ -837,7 +844,6 @@ svg {
     overflow-x: scroll;
     justify-content: left;
     text-wrap: nowrap;
-    padding-top: 20px;
     padding-bottom: 20px;
   }
 }
@@ -914,5 +920,126 @@ svg {
   .feature-display-container .feature-capsule .arrow-down-right {
     width: 40px;
     height: 40px;
+  }
+}
+
+.books-gallery-container {
+  display: flex;
+  justify-content: center;
+  max-width: 1520px;
+  gap: 40px;
+  padding: 0px 20px 0px 20px;
+  margin: auto;
+}
+@media (max-width: 1380px) {
+  .books-gallery-container {
+    max-width: 1120px;
+    gap: 32px;
+  }
+}
+@media (max-width: 960px) {
+  .books-gallery-container {
+    flex-direction: column;
+    gap: 56px;
+  }
+}
+.books-gallery-container .book-display {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 50%;
+}
+@media (max-width: 960px) {
+  .books-gallery-container .book-display {
+    max-width: 100%;
+  }
+}
+.books-gallery-container .book-display .display-heading {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+@media (max-width: 1380px) {
+  .books-gallery-container .book-display .display-heading {
+    gap: 32px;
+  }
+}
+@media (max-width: 720px) {
+  .books-gallery-container .book-display .display-heading {
+    flex-direction: column;
+    align-items: inherit;
+    gap: 8px;
+  }
+}
+.books-gallery-container .book-display .display-heading .book-mockup {
+  width: 220px;
+  height: 286px;
+}
+@media (max-width: 1380px) {
+  .books-gallery-container .book-display .display-heading .book-mockup {
+    width: 160px;
+    height: 210px;
+  }
+}
+@media (max-width: 720px) {
+  .books-gallery-container .book-display .display-heading .book-mockup {
+    align-self: center;
+  }
+}
+.books-gallery-container .book-display .display-heading .book-title-container {
+  max-width: 320px;
+}
+@media (max-width: 960px) {
+  .books-gallery-container .book-display .display-heading .book-title-container {
+    max-width: 400px;
+  }
+}
+@media (max-width: 720px) {
+  .books-gallery-container .book-display .display-heading .book-title-container {
+    max-width: 100%;
+  }
+}
+.books-gallery-container .book-display .display-heading .book-title-container .book-title {
+  font-family: "Kanit";
+  font-weight: 500;
+  font-size: 3.6rem;
+  line-height: 1.45;
+}
+.books-gallery-container .book-display .display-heading .book-title-container .book-subtitle {
+  font-family: "Kanit";
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 1.6;
+  color: #E2E3E5;
+}
+@media (max-width: 1380px) {
+  .books-gallery-container .book-display .display-heading .book-title-container .book-subtitle {
+    font-family: "Kanit";
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 1.75;
+  }
+}
+.books-gallery-container .book-display .book-description {
+  font-family: "Merriweather";
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 1.8;
+}
+@media (max-width: 1380px) {
+  .books-gallery-container .book-display .book-description {
+    font-family: "Merriweather";
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 1.75;
+  }
+}
+.books-gallery-container .book-display .primary-button {
+  margin-top: auto;
+  align-self: flex-start;
+}
+@media (max-width: 960px) {
+  .books-gallery-container .book-display .primary-button {
+    align-self: inherit;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -55,15 +55,20 @@ svg {
   max-width: 1520px;
   padding: 200px 20px 80px 20px;
   margin: auto;
-  text-align: center;
+  text-align: left;
+
+  &--center {
+    text-align: center;
+  }
 
   @include xl {
     @include Kanit--h2-bold;
+    max-width: 1120px;
     padding-top: 160px;
     padding-bottom: 56px;
   }
 
-  @include xl {
+  @include md {
     padding-bottom: 40px;
     text-align: left;
   }
