@@ -94,3 +94,30 @@ function smoothScrollTo(endX, endY, duration) {
     window.scroll(newX, newY);
   }, 1000 / 60); // 60 fps
 };
+
+
+// Video pop up
+
+let playBtn = document.querySelector('.doc-video-player');
+let playBtnSecondary = document.querySelector('.secondary-button--trailer');
+let videoContainer = document.querySelector('.documentary-video-pop-up');
+let closeVideoBtn = document.querySelector('.close-icon');
+let videoIframe = document.querySelector('.trailer-video');
+
+playBtn.addEventListener('click',()=>{
+  videoContainer.classList.add('documentary-video-pop-up--active');
+  videoIframe.src = "https://www.youtube.com/embed/vQna8iPWEuY?autoplay=1"; // Substitua pela URL do seu vídeo
+
+})
+
+playBtnSecondary.addEventListener('click',()=>{
+  videoContainer.classList.add('documentary-video-pop-up--active');
+  videoIframe.src = "https://www.youtube.com/embed/vQna8iPWEuY?autoplay=1"; // Substitua pela URL do seu vídeo
+
+})
+
+closeVideoBtn.addEventListener('click',()=>{
+  videoContainer.classList.remove('documentary-video-pop-up--active');
+  videoIframe.src = ''; // Pausa o vídeo ao remover a URL
+
+})

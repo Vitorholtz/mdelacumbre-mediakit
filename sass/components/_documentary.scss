@@ -1,0 +1,276 @@
+@use "../styles" as *;
+
+
+.documentary {
+    width: 100%;
+    padding: 98px 0;
+    background: radial-gradient(60.48% 60.48% at 50.00% 36.85%, rgba(13, 17, 23, 0.00) 0%, #0D1117 100%), linear-gradient(180deg, #0D1117 0%, rgba(0, 0, 0, 0.00) 100%),
+    url("/assets/images/bg-test-test.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 200px;
+
+    @include xl {
+        padding: 80px 0;
+        margin-top: 160px;
+      }
+
+      @include lg {
+        padding: 32px 0;
+        margin-top: 120px;
+      }
+
+      @include md {
+        margin-top: 64px;
+      }
+
+    .doc-content-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 32px;
+        max-width: 1520px;
+        padding: 0 20px;
+        margin: auto;
+
+        @include xl {
+            max-width: 1120px;
+          }
+
+          @include lg {
+            flex-direction: column;
+          }
+
+        .doc-description-container {
+            max-width: 480px;
+
+            @include xl {
+                max-width: 448px;
+              }
+
+              @include lg {
+                max-width: 100%;
+              }
+
+            .doc-title {
+                width: 338px;
+                height: 172px;
+
+                @include xl {
+                    width: 260px;
+                    height: 132px;
+                  }
+
+                  @include lg {
+                    margin: auto;
+                  }
+
+                  @include md {
+                    margin: inherit;
+                  }
+            }
+
+            .doc-description {
+                @include Merriweather--body2-light;
+
+                @include xl {
+                    @include Merriweather--body-light;
+                  }
+
+                  @include lg {
+                    text-align: center;
+                  }
+
+                  @include md {
+                    text-align: left;
+                  }
+            }
+
+            .btn-container {
+                margin-top: 32px;
+                display: flex;
+                gap: 32px;
+    
+                @include xl {
+                    margin-top: 24px;
+                    gap: 24px;
+                  }
+
+                  @include lg {
+                    justify-content: center;
+                  }
+
+                  @include md {
+                    justify-content: left;
+                  }
+            }
+        }
+
+        .doc-video-player {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 870px;
+            height: 495px;
+            background: rgba(13, 17, 23, 0.80);
+            backdrop-filter: blur(6px);
+            border-width: 8px;
+            border-style: solid;
+            border-image: linear-gradient(to bottom, #ffffff50, rgba(255, 255, 255, 0.082)) 1;
+            transition: .3s all ease;
+            cursor: pointer;
+            // Testar blend modes com composição do velho
+            mix-blend-mode: lighten;
+
+            @include xl {
+                width: 578px;
+                height: 328px;
+                border-width: 6px;
+              }
+
+              @include md {
+                width: 100%;
+                max-height: 200px;
+              }
+
+            &:hover {
+                border-image: linear-gradient(to bottom, #FFBD147c, rgba(255, 255, 255, 0.082)) 1;
+                backdrop-filter: blur(0px);
+
+                .play-btn {
+                    width: 106px;
+                    height: 106px;
+                    border: 2px $md-gray solid;
+                    background-color: #0d11172d;
+
+                    @include xl {
+                        width: 64px;
+                        height: 64px;
+                      }
+
+                      @include md {
+                        width: 48px;
+                        height: 48px;
+                      }
+
+                    .play-icon {
+                        filter: invert(100);
+
+                        @include xl {
+                            width: 28px;
+                            height: 28px;
+                          }
+
+                          @include md {
+                            width: 20px;
+                            height: 20px;
+                          }
+                    }
+                }
+            }
+
+            .play-btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 120px;
+                height: 120px;
+                background-color: $md-white;
+                border-radius: 50%;
+                transition: .3s all ease;
+
+                @include xl {
+                    width: 80px;
+                    height: 80px;
+                  }
+
+                  @include md {
+                    width: 56px;
+                    height: 56px;
+                  }
+
+                .play-icon {
+                    width: 40px;
+                    height: 40px;
+                    padding-left: 8px;
+
+                    @include xl {
+                        width: 32px;
+                        height: 32px;
+                        padding-left: 6px;
+                      }
+
+                      @include md {
+                        width: 24px;
+                        height: 24px;
+                      }
+                }
+            }
+        }
+    }
+}
+
+// Video pop up
+
+.documentary-video-pop-up {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(180deg, #0D1117 0%, rgba(13, 17, 23, 0.00) 100%);
+  backdrop-filter: blur(6px);
+  z-index: 100;
+  transform: scale(0);
+  transition: all .3s ease;
+  animation: smoothshowReverse 1s both;
+
+  &--active {
+    transform: scale(1);
+    animation: smoothshow 1s both;
+  }
+
+  .pop-up-content-container {
+    width: 1120px;
+    padding: 0 20px;
+    margin: auto;
+    
+    .close-icon {
+      box-sizing: content-box;
+      display: block;
+      margin-left: auto;
+      margin-bottom: 32px;
+      width: 28px;
+      height: 28px;
+      padding: 10px;
+      border: 2px #84868a70 solid;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &:hover {
+        border-color: $md-white;
+        background: rgba(40, 48, 61, 0.64);
+      }
+    }
+      .trailer-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+
+        .trailer-video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          border: none;
+        }
+      }
+  }
+}
