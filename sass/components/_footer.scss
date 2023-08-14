@@ -1,0 +1,72 @@
+@use "../styles" as *;
+
+
+.footer {
+    background-color: rgb(22, 22, 22);
+    width: 100%;
+    padding: 80px 0;
+    margin-top: 200px;
+    
+    .footer-content-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        max-width: 1520px;
+        padding: 0 20px;
+        margin: auto;
+
+        @include xl {
+            max-width: 1120px;
+            flex-direction: column-reverse;
+            align-items: stretch;
+            gap: 40px;
+          }
+
+          .footer-left-container {
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+            gap: 64px;
+            border: 1px red solid;
+
+            @include xl {
+                align-items: center;
+              }
+
+            .copy-right {
+                @include Merriweather--caption-regular;
+                color: $md-offwhite;
+            }
+          }
+
+          .footer-mid-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+            border: 1px red solid;
+
+            .profile-img {
+                width: 188px;
+                height: 100%;
+            }
+          }
+
+          .footer-right-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 24px;
+            border: 1px red solid;
+
+            @include xl {
+                align-items: center
+              }
+
+            .social-media-title {
+                @include Kanit--body2-bold;
+                text-align: right;
+            }
+          }
+    }
+}

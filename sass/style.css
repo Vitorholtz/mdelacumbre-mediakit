@@ -443,55 +443,6 @@ svg {
     max-width: 1120px;
   }
 }
-.md-header .header-content-container .social-media-links {
-  display: flex;
-}
-.md-header .header-content-container .social-media-links .sm-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 100px;
-  transition: all 0.2s ease-in;
-}
-.md-header .header-content-container .social-media-links .sm-link:hover {
-  filter: invert(0.3) sepia(0.5) saturate(20) hue-rotate(0deg) brightness(1.08);
-}
-.md-header .header-content-container .header-nav-bar {
-  display: flex;
-  align-items: baseline;
-  gap: 40px;
-}
-.md-header .header-content-container .header-nav-bar .nav-item {
-  font-family: "Merriweather";
-  font-weight: 300;
-  font-size: 1.6rem;
-  line-height: 1.75;
-  color: #E2E3E5;
-  transition: all 0.2s linear;
-}
-.md-header .header-content-container .header-nav-bar .nav-item::after {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 6px;
-  background-color: #FFBD14;
-  opacity: 0;
-  transition: all 0.2s linear;
-}
-.md-header .header-content-container .header-nav-bar .nav-item:hover::after {
-  width: 50%;
-  opacity: 1;
-}
-.md-header .header-content-container .header-nav-bar .nav-item:hover {
-  color: #ffffff;
-}
-@media (max-width: 960px) {
-  .md-header .header-content-container .header-nav-bar {
-    display: none;
-  }
-}
 .md-header .header-content-container .mobile-menu-toggle {
   display: flex;
   gap: 2px;
@@ -581,6 +532,57 @@ svg {
   opacity: 1;
   top: 0;
   animation: smoothshow 1s both;
+}
+
+.md-nav-bar {
+  display: flex;
+  align-items: baseline;
+  gap: 40px;
+}
+.md-nav-bar .nav-item {
+  font-family: "Merriweather";
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #E2E3E5;
+  transition: all 0.2s linear;
+}
+.md-nav-bar .nav-item::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 6px;
+  background-color: #FFBD14;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+.md-nav-bar .nav-item:hover::after {
+  width: 50%;
+  opacity: 1;
+}
+.md-nav-bar .nav-item:hover {
+  color: #ffffff;
+}
+@media (max-width: 960px) {
+  .md-nav-bar {
+    display: none;
+  }
+}
+
+.social-media-links {
+  display: flex;
+}
+.social-media-links .sm-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  transition: all 0.2s ease-in;
+}
+.social-media-links .sm-link:hover {
+  filter: invert(0.3) sepia(0.5) saturate(20) hue-rotate(0deg) brightness(1.08);
 }
 
 .md-hero {
@@ -1344,4 +1346,76 @@ svg {
   width: 100%;
   height: 100%;
   border: none;
+}
+
+.footer {
+  background-color: rgb(22, 22, 22);
+  width: 100%;
+  padding: 80px 0;
+  margin-top: 200px;
+}
+.footer .footer-content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: 1520px;
+  padding: 0 20px;
+  margin: auto;
+}
+@media (max-width: 1380px) {
+  .footer .footer-content-container {
+    max-width: 1120px;
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 40px;
+  }
+}
+.footer .footer-content-container .footer-left-container {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 64px;
+  border: 1px red solid;
+}
+@media (max-width: 1380px) {
+  .footer .footer-content-container .footer-left-container {
+    align-items: center;
+  }
+}
+.footer .footer-content-container .footer-left-container .copy-right {
+  font-family: "Merriweather";
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #E2E3E5;
+}
+.footer .footer-content-container .footer-mid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  border: 1px red solid;
+}
+.footer .footer-content-container .footer-mid-container .profile-img {
+  width: 188px;
+  height: 100%;
+}
+.footer .footer-content-container .footer-right-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 24px;
+  border: 1px red solid;
+}
+@media (max-width: 1380px) {
+  .footer .footer-content-container .footer-right-container {
+    align-items: center;
+  }
+}
+.footer .footer-content-container .footer-right-container .social-media-title {
+  font-family: "Kanit";
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.6;
+  text-align: right;
 }/*# sourceMappingURL=style.css.map */

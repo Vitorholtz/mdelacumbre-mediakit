@@ -36,7 +36,7 @@ feather.replace()
 // Verificar a distância entre o alvo e o topo
 // Animar o scroll até o alvo
 
-const menuItems = document.querySelectorAll('.header-nav-bar a[href^="#"]');
+const menuItems = document.querySelectorAll('.md-nav-bar a[href^="#"]');
 
 function getScrollTopByHref(element) {
 	const id = element.getAttribute('href');
