@@ -2,11 +2,17 @@
 
 
 .footer {
-    background-color: rgb(22, 22, 22);
+    border-top: 1px solid #626060;
+    background: rgba(13, 17, 23, 0.50);
+    backdrop-filter: blur(6px);
     width: 100%;
     padding: 80px 0;
     margin-top: 200px;
-    
+
+    @include xl {
+      padding: 64px 0;
+    }
+
     .footer-content-container {
         display: flex;
         justify-content: space-between;
@@ -19,15 +25,14 @@
             max-width: 1120px;
             flex-direction: column-reverse;
             align-items: stretch;
-            gap: 40px;
+            gap: 64px;
           }
 
           .footer-left-container {
             display: flex;
             flex-direction: column;
             align-items: baseline;
-            gap: 64px;
-            border: 1px red solid;
+            gap: 32px;
 
             @include xl {
                 align-items: center;
@@ -44,7 +49,6 @@
             flex-direction: column;
             align-items: center;
             gap: 32px;
-            border: 1px red solid;
 
             .profile-img {
                 width: 188px;
@@ -56,11 +60,14 @@
             display: flex;
             flex-direction: column;
             align-items: flex-end;
-            gap: 24px;
-            border: 1px red solid;
+            gap: 32px;
 
             @include xl {
                 align-items: center
+              }
+
+              @include md {
+                gap: 16px;
               }
 
             .social-media-title {

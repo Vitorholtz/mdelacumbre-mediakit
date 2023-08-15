@@ -534,57 +534,6 @@ svg {
   animation: smoothshow 1s both;
 }
 
-.md-nav-bar {
-  display: flex;
-  align-items: baseline;
-  gap: 40px;
-}
-.md-nav-bar .nav-item {
-  font-family: "Merriweather";
-  font-weight: 300;
-  font-size: 1.6rem;
-  line-height: 1.75;
-  color: #E2E3E5;
-  transition: all 0.2s linear;
-}
-.md-nav-bar .nav-item::after {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 6px;
-  background-color: #FFBD14;
-  opacity: 0;
-  transition: all 0.2s linear;
-}
-.md-nav-bar .nav-item:hover::after {
-  width: 50%;
-  opacity: 1;
-}
-.md-nav-bar .nav-item:hover {
-  color: #ffffff;
-}
-@media (max-width: 960px) {
-  .md-nav-bar {
-    display: none;
-  }
-}
-
-.social-media-links {
-  display: flex;
-}
-.social-media-links .sm-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 100px;
-  transition: all 0.2s ease-in;
-}
-.social-media-links .sm-link:hover {
-  filter: invert(0.3) sepia(0.5) saturate(20) hue-rotate(0deg) brightness(1.08);
-}
-
 .md-hero {
   position: relative;
   width: 100%;
@@ -1349,10 +1298,18 @@ svg {
 }
 
 .footer {
-  background-color: rgb(22, 22, 22);
+  border-top: 1px solid #626060;
+  background: rgba(13, 17, 23, 0.5);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
   width: 100%;
   padding: 80px 0;
   margin-top: 200px;
+}
+@media (max-width: 1380px) {
+  .footer {
+    padding: 64px 0;
+  }
 }
 .footer .footer-content-container {
   display: flex;
@@ -1367,15 +1324,14 @@ svg {
     max-width: 1120px;
     flex-direction: column-reverse;
     align-items: stretch;
-    gap: 40px;
+    gap: 64px;
   }
 }
 .footer .footer-content-container .footer-left-container {
   display: flex;
   flex-direction: column;
   align-items: baseline;
-  gap: 64px;
-  border: 1px red solid;
+  gap: 32px;
 }
 @media (max-width: 1380px) {
   .footer .footer-content-container .footer-left-container {
@@ -1394,7 +1350,6 @@ svg {
   flex-direction: column;
   align-items: center;
   gap: 32px;
-  border: 1px red solid;
 }
 .footer .footer-content-container .footer-mid-container .profile-img {
   width: 188px;
@@ -1404,12 +1359,16 @@ svg {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 24px;
-  border: 1px red solid;
+  gap: 32px;
 }
 @media (max-width: 1380px) {
   .footer .footer-content-container .footer-right-container {
     align-items: center;
+  }
+}
+@media (max-width: 720px) {
+  .footer .footer-content-container .footer-right-container {
+    gap: 16px;
   }
 }
 .footer .footer-content-container .footer-right-container .social-media-title {
@@ -1418,4 +1377,61 @@ svg {
   font-size: 2rem;
   line-height: 1.6;
   text-align: right;
+}
+
+.md-nav-bar--header, .md-nav-bar--footer {
+  display: flex;
+  align-items: baseline;
+  gap: 40px;
+}
+.md-nav-bar--header .nav-item, .md-nav-bar--footer .nav-item {
+  font-family: "Merriweather";
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #E2E3E5;
+  transition: all 0.2s linear;
+}
+.md-nav-bar--header .nav-item::after, .md-nav-bar--footer .nav-item::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 6px;
+  background-color: #FFBD14;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+.md-nav-bar--header .nav-item:hover::after, .md-nav-bar--footer .nav-item:hover::after {
+  width: 50%;
+  opacity: 1;
+}
+.md-nav-bar--header .nav-item:hover, .md-nav-bar--footer .nav-item:hover {
+  color: #ffffff;
+}
+@media (max-width: 960px) {
+  .md-nav-bar--header:not(.md-nav-bar--footer), .md-nav-bar--footer:not(.md-nav-bar--footer) {
+    display: none;
+  }
+}
+@media (max-width: 720px) {
+  .md-nav-bar--header.md-nav-bar--footer, .md-nav-bar--footer.md-nav-bar--footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.social-media-links {
+  display: flex;
+}
+.social-media-links .sm-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  transition: all 0.2s ease-in;
+}
+.social-media-links .sm-link:hover {
+  filter: invert(0.3) sepia(0.5) saturate(20) hue-rotate(0deg) brightness(1.08);
 }/*# sourceMappingURL=style.css.map */
