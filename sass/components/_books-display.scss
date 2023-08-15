@@ -70,14 +70,33 @@
 
                 .book-title {
                     @include Kanit--h2-bold;
+
+                    @include md {
+                      @include Kanit--h3-bold;
+                    }
                 }
 
                 .book-subtitle {
+                    position: relative;
                     @include Kanit--body2-light;
                     color: $md-offwhite;
+                    margin-top: 10px;
+                    padding-left: 16px;
 
                     @include xl {
                         @include Kanit--body-light;
+                        max-width: 300px;
+                      }
+
+                      &:before {
+                        position: absolute;
+                        content: '';
+                        left: 0;
+                        bottom: 3px;
+                        height: 90%;
+                        width: 2px;
+                        background-color: $md-gray;
+                        opacity: .5;
                       }
                 }
             }

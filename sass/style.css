@@ -205,6 +205,7 @@ html ::selection {
 }
 
 body {
+  position: relative;
   font-family: Helvetica, Sans-serif;
   background-color: #0D1117;
   color: #ffffff;
@@ -232,38 +233,6 @@ img {
 
 svg {
   transition: all 0.2s ease;
-}
-
-.section-title {
-  font-family: "Kanit";
-  font-weight: 500;
-  font-size: 4.8rem;
-  line-height: 1.34;
-  letter-spacing: -0.4 0.8rem;
-  max-width: 1520px;
-  padding: 200px 20px 80px 20px;
-  margin: auto;
-  text-align: left;
-}
-.section-title--center {
-  text-align: center;
-}
-@media (max-width: 1380px) {
-  .section-title {
-    font-family: "Kanit";
-    font-weight: 500;
-    font-size: 3.6rem;
-    line-height: 1.45;
-    max-width: 1120px;
-    padding-top: 160px;
-    padding-bottom: 56px;
-  }
-}
-@media (max-width: 720px) {
-  .section-title {
-    padding-bottom: 40px;
-    text-align: left;
-  }
 }
 
 /* width */
@@ -369,6 +338,9 @@ svg {
 }
 .secondary-button:hover .arrow-down-right {
   transform: rotate(45deg);
+}
+.secondary-button:hover .arrow-up {
+  transform: translateY(-4px);
 }
 .secondary-button:active {
   background: rgba(0, 0, 0, 0);
@@ -725,6 +697,14 @@ svg {
     line-height: 1.45;
   }
 }
+@media (max-width: 720px) {
+  .info-display .info-container .info-title {
+    font-family: "Kanit";
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 1.25;
+  }
+}
 .info-display .info-container .info-description {
   font-family: "Merriweather";
   font-weight: 300;
@@ -967,12 +947,23 @@ svg {
   font-size: 3.6rem;
   line-height: 1.45;
 }
+@media (max-width: 720px) {
+  .books-gallery-container .book-display .display-heading .book-title-container .book-title {
+    font-family: "Kanit";
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 1.25;
+  }
+}
 .books-gallery-container .book-display .display-heading .book-title-container .book-subtitle {
+  position: relative;
   font-family: "Kanit";
   font-weight: 300;
   font-size: 2rem;
   line-height: 1.6;
   color: #E2E3E5;
+  margin-top: 10px;
+  padding-left: 16px;
 }
 @media (max-width: 1380px) {
   .books-gallery-container .book-display .display-heading .book-title-container .book-subtitle {
@@ -980,7 +971,18 @@ svg {
     font-weight: 300;
     font-size: 1.6rem;
     line-height: 1.75;
+    max-width: 300px;
   }
+}
+.books-gallery-container .book-display .display-heading .book-title-container .book-subtitle:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 3px;
+  height: 90%;
+  width: 2px;
+  background-color: #84868A;
+  opacity: 0.5;
 }
 .books-gallery-container .book-display .book-description {
   font-family: "Merriweather";
@@ -1297,6 +1299,38 @@ svg {
   border: none;
 }
 
+.last-call {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  max-width: 1120px;
+  padding: 0 20px;
+  margin: auto;
+}
+@media (max-width: 1380px) {
+  .last-call {
+    max-width: 720px;
+  }
+}
+.last-call .section-title {
+  padding-bottom: 32px;
+}
+@media (max-width: 720px) {
+  .last-call .section-title {
+    text-align: center;
+  }
+}
+.last-call .btn-container {
+  display: flex;
+  gap: 32px;
+}
+@media (max-width: 1380px) {
+  .last-call .btn-container {
+    gap: 24px;
+  }
+}
+
 .footer {
   border-top: 1px solid #626060;
   background: rgba(13, 17, 23, 0.5);
@@ -1331,6 +1365,7 @@ svg {
   display: flex;
   flex-direction: column;
   align-items: baseline;
+  min-width: 266px;
   gap: 32px;
   order: 1;
 }
@@ -1361,6 +1396,7 @@ svg {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  min-width: 266px;
   gap: 32px;
   order: 3;
 }
@@ -1381,6 +1417,42 @@ svg {
   font-size: 2rem;
   line-height: 1.6;
   text-align: right;
+}
+
+.section-title {
+  font-family: "Kanit";
+  font-weight: 500;
+  font-size: 4.8rem;
+  line-height: 1.34;
+  letter-spacing: -0.4 0.8rem;
+  max-width: 1520px;
+  padding: 200px 20px 80px 20px;
+  margin: auto;
+  text-align: left;
+}
+.section-title--center {
+  text-align: center;
+}
+@media (max-width: 1380px) {
+  .section-title {
+    font-family: "Kanit";
+    font-weight: 500;
+    font-size: 3.6rem;
+    line-height: 1.45;
+    max-width: 1120px;
+    padding-top: 160px;
+    padding-bottom: 56px;
+  }
+}
+@media (max-width: 720px) {
+  .section-title {
+    font-family: "Kanit";
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 1.25;
+    padding-bottom: 40px;
+    text-align: left;
+  }
 }
 
 .md-nav-bar--header, .md-nav-bar--footer {
@@ -1438,4 +1510,18 @@ svg {
 }
 .social-media-links .sm-link:hover {
   filter: invert(0.3) sepia(0.5) saturate(20) hue-rotate(0deg) brightness(1.08);
+}
+
+.spot-light-footer {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: -120px;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 260px;
+  border-radius: 50%;
+  background-color: #ff7714;
+  filter: blur(332px);
+  z-index: -10;
 }/*# sourceMappingURL=style.css.map */

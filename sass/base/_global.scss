@@ -20,6 +20,8 @@ html {
 }
 
 body {
+  // Verificar se isso não dá problema em outros componentes (Position relative no body)
+  position: relative;
   font-family: Helvetica, Sans-serif;
   background-color: $md-black;
   color: $md-white;
@@ -48,30 +50,6 @@ img {
 
 svg {
   transition: all .2s ease;
-}
-
-.section-title {
-  @include Kanit--h1-bold;
-  max-width: 1520px;
-  padding: 200px 20px 80px 20px;
-  margin: auto;
-  text-align: left;
-
-  &--center {
-    text-align: center;
-  }
-
-  @include xl {
-    @include Kanit--h2-bold;
-    max-width: 1120px;
-    padding-top: 160px;
-    padding-bottom: 56px;
-  }
-
-  @include md {
-    padding-bottom: 40px;
-    text-align: left;
-  }
 }
 
 // Custom scroll

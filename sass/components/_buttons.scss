@@ -79,6 +79,11 @@
         .arrow-down-right {
             transform: rotate(45deg);
         }
+
+        .arrow-up {
+
+            transform: translateY(-4px);
+        }
     }
 
     &:active {

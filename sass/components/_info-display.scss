@@ -52,6 +52,10 @@
             @include xl {
                 @include Kanit--h2-bold;
               }
+
+              @include md {
+                @include Kanit--h3-bold;
+              }
         }
 
         .info-description {
