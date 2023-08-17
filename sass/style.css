@@ -187,6 +187,14 @@ select {
     opacity: 0;
   }
 }
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-2250px);
+  }
+}
 * {
   color: inherit;
   margin: 0;
@@ -1297,6 +1305,84 @@ svg {
   width: 100%;
   height: 100%;
   border: none;
+}
+
+.photo-slider {
+  display: grid;
+  place-items: center;
+  margin: auto;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.photo-slider::before, .photo-slider::after {
+  background: linear-gradient(to right, #0D1117, rgba(13, 17, 23, 0));
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 20%;
+  z-index: 2;
+  pointer-events: none;
+}
+.photo-slider::before {
+  left: 0;
+  top: 0;
+}
+.photo-slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.photo-slider .slider-track {
+  display: flex;
+  animation: scroll 40s linear infinite;
+  cursor: crosshair;
+}
+.photo-slider .slider-track:hover {
+  animation-play-state: paused;
+}
+.photo-slider .slider-track .slide {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 250px;
+  overflow: hidden;
+}
+.photo-slider .slider-track .slide img {
+  width: 100%;
+}
+.photo-slider .slider-track .slide .upper-slide-layer {
+  display: flex;
+  flex-direction: column-reverse;
+  position: absolute;
+  justify-items: baseline;
+  padding: 16px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(13, 17, 23, 0.8470588235);
+  transition: all 0.3s ease;
+  transform: translateY(100%);
+  animation: smoothshowReverse 2s both;
+}
+.photo-slider .slider-track .slide .upper-slide-layer .photo-title {
+  display: block;
+  font-family: "Kanit";
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 1.41;
+}
+.photo-slider .slider-track .slide .upper-slide-layer .photo-subtitle {
+  display: block;
+  font-family: "Merriweather";
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.7;
+}
+.photo-slider .slider-track .slide:hover .upper-slide-layer {
+  transform: translateY(0%);
+  animation: smoothshow 0.3s both;
 }
 
 .last-call {

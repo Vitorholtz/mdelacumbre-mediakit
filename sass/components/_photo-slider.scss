@@ -1,0 +1,88 @@
+@use "../styles" as *;
+
+.photo-slider {
+    display: grid;
+    place-items: center;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+        background: linear-gradient(to right, #0D1117,#0d111700);
+        content: "";
+        height: 100%;
+        position: absolute;
+        width: 20%;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    &::before {
+        left: 0;
+        top: 0;
+    }
+
+    &::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+    }
+
+    .slider-track {
+        display: flex;
+        animation: scroll 40s linear infinite;
+        cursor: crosshair;
+
+        &:hover {
+            animation-play-state: paused;
+        }
+
+        .slide {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 250px;
+            overflow: hidden;
+            
+            img {
+                width: 100%;
+            }
+
+            .upper-slide-layer {
+                display: flex;
+                flex-direction: column-reverse;
+                position: absolute;
+                justify-items: baseline;
+                padding: 16px;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: #0d1117d8;
+                transition: all .3s ease;
+                transform: translateY(100%);
+                animation: smoothshowReverse 2s both;
+
+                .photo-title {
+                    display: block;
+                    @include Kanit--h4-bold;
+                }
+
+                .photo-subtitle {
+                    display: block;
+                    @include Merriweather--caption-light
+                }
+            }
+
+            &:hover {
+                .upper-slide-layer {
+                    transform: translateY(0%);
+                    animation: smoothshow .3s both;
+                }
+            }
+
+        }
+    }
+}
