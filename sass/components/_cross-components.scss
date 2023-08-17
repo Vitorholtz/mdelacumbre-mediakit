@@ -113,3 +113,57 @@
     z-index: -10;
 
 }
+
+// Instagram redirect
+
+.instagram-redirect {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    .redirect-title {
+        @include Merriweather--body2-light;
+        color: $md-gray;
+        transition: .3s ease all;
+
+        @include xl {
+            @include Merriweather--body-light;
+          }
+    }
+
+    .arrow-right {
+        stroke: $md-gray;
+
+        @include xl {
+            width: 20px;
+            height: 20px;
+          }
+    }
+
+    .ig-icon {
+        width: 32px;
+        height: 32px;
+        transition: .3s ease all;
+
+        @include xl {
+            width: 24px;
+            height: 24px;
+          }
+    }
+
+    &:hover {
+        .redirect-title {
+            color: $md-white;
+        }
+
+        .arrow-right {
+            transform: translateX(4px);
+            stroke: $md-white;
+        }
+
+        .ig-icon {
+            filter: invert(0.3) sepia(0.5) saturate(20) hue-rotate(0deg) brightness(1.08);
+        }
+    }
+
+}

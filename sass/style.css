@@ -1307,6 +1307,31 @@ svg {
   border: none;
 }
 
+.title-and-redirect {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  max-width: 1520px;
+  padding: 0 20px;
+  margin: auto;
+}
+@media (max-width: 720px) {
+  .title-and-redirect {
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+}
+.title-and-redirect .section-title {
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+@media (max-width: 720px) {
+  .title-and-redirect .section-title {
+    padding-bottom: 16px;
+  }
+}
+
 .photo-slider {
   display: grid;
   place-items: center;
@@ -1314,6 +1339,11 @@ svg {
   position: relative;
   width: 100%;
   overflow: hidden;
+}
+@media (max-width: 480px) {
+  .photo-slider {
+    overflow-x: scroll;
+  }
 }
 .photo-slider::before, .photo-slider::after {
   background: linear-gradient(to right, #0D1117, rgba(13, 17, 23, 0));
@@ -1323,6 +1353,11 @@ svg {
   width: 20%;
   z-index: 2;
   pointer-events: none;
+}
+@media (max-width: 480px) {
+  .photo-slider::before, .photo-slider::after {
+    background: none;
+  }
 }
 .photo-slider::before {
   left: 0;
@@ -1338,6 +1373,11 @@ svg {
   animation: scroll 40s linear infinite;
   cursor: crosshair;
 }
+@media (max-width: 480px) {
+  .photo-slider .slider-track {
+    animation: none;
+  }
+}
 .photo-slider .slider-track:hover {
   animation-play-state: paused;
 }
@@ -1347,6 +1387,21 @@ svg {
   position: relative;
   width: 250px;
   overflow: hidden;
+}
+@media (max-width: 1380px) {
+  .photo-slider .slider-track .slide {
+    width: 220px;
+  }
+}
+@media (max-width: 720px) {
+  .photo-slider .slider-track .slide {
+    width: 200px;
+  }
+}
+@media (max-width: 480px) {
+  .photo-slider .slider-track .slide {
+    width: 180px;
+  }
 }
 .photo-slider .slider-track .slide img {
   width: 100%;
@@ -1610,4 +1665,56 @@ svg {
   background-color: #ff7714;
   filter: blur(332px);
   z-index: -10;
+}
+
+.instagram-redirect {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.instagram-redirect .redirect-title {
+  font-family: "Merriweather";
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 1.8;
+  color: #84868A;
+  transition: 0.3s ease all;
+}
+@media (max-width: 1380px) {
+  .instagram-redirect .redirect-title {
+    font-family: "Merriweather";
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 1.75;
+  }
+}
+.instagram-redirect .arrow-right {
+  stroke: #84868A;
+}
+@media (max-width: 1380px) {
+  .instagram-redirect .arrow-right {
+    width: 20px;
+    height: 20px;
+  }
+}
+.instagram-redirect .ig-icon {
+  width: 32px;
+  height: 32px;
+  transition: 0.3s ease all;
+}
+@media (max-width: 1380px) {
+  .instagram-redirect .ig-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+.instagram-redirect:hover .redirect-title {
+  color: #ffffff;
+}
+.instagram-redirect:hover .arrow-right {
+  transform: translateX(4px);
+  stroke: #ffffff;
+}
+.instagram-redirect:hover .ig-icon {
+  filter: invert(0.3) sepia(0.5) saturate(20) hue-rotate(0deg) brightness(1.08);
 }/*# sourceMappingURL=style.css.map */
