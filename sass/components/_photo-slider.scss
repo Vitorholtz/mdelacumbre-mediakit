@@ -121,11 +121,16 @@
                 .photo-title {
                     display: block;
                     @include Kanit--h4-bold;
+
+                    @include md {
+                        @include Kanit--body2-bold;
+                      }
                 }
 
                 .photo-subtitle {
                     display: block;
                     @include Merriweather--caption-light
+                    
                 }
             }
 

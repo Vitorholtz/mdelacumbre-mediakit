@@ -1,0 +1,93 @@
+@use "../styles" as *;
+
+.numbers-display {
+    display: flex;
+    max-width: 1520px;
+    padding: 0 20px;
+    gap: 40px;
+    margin: auto;
+    align-items: end;
+    justify-content: space-between;
+    overflow: hidden;
+
+    @include xl {
+        max-width: 1120px;
+        gap: 32px;
+      }
+
+    .numbers-content-container {
+
+        @include md {
+            width: 100%;
+          }
+
+        .title-and-redirect {
+            padding: 0;
+        }
+
+        .numbers-grid {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 26px;
+
+            @include lg {
+                grid-template-columns: auto auto auto;
+              }
+
+              @include md {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 16px;
+              }
+
+            .number-container {
+                display: flex;
+                flex-direction: column;
+                width: 216px;
+
+                @include xl {
+                    width: 160px;
+                  }
+
+                  @include md {
+                    width: 47%;
+                  }
+
+                .number {
+                    @include Kanit--h1-bold;
+                    font-size: 6.4rem;
+                    line-height: 1;
+                    color: $md-accent-yellow;
+
+                    @include xl {
+                        font-size: 4.8rem;
+                        line-height: .8;
+                      }
+                    
+                }
+
+                .number-subtitle {
+                    @include Kanit--h4-light;
+
+                    @include xl {
+                        @include Kanit--body-light;
+                      }
+                }
+            }
+        }
+    }
+
+    .instagram-phone {
+        margin: 0 auto;
+        width: 350px;
+        height: 100%;
+
+        @include xl {
+            width: 256px;
+          }
+
+          @include md {
+            display: none;
+          }
+    }
+}

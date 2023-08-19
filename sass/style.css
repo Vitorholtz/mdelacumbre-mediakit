@@ -727,6 +727,20 @@ svg {
     line-height: 1.75;
   }
 }
+.info-display .info-container .btn-container {
+  display: flex;
+  gap: 32px;
+}
+@media (max-width: 1380px) {
+  .info-display .info-container .btn-container {
+    gap: 24px;
+  }
+}
+@media (max-width: 720px) {
+  .info-display .info-container .btn-container {
+    flex-direction: column;
+  }
+}
 .info-display .info-img {
   width: 740px;
   height: 460px;
@@ -1428,6 +1442,14 @@ svg {
   font-size: 2.4rem;
   line-height: 1.41;
 }
+@media (max-width: 720px) {
+  .photo-slider .slider-track .slide .upper-slide-layer .photo-title {
+    font-family: "Kanit";
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1.6;
+  }
+}
 .photo-slider .slider-track .slide .upper-slide-layer .photo-subtitle {
   display: block;
   font-family: "Merriweather";
@@ -1438,6 +1460,108 @@ svg {
 .photo-slider .slider-track .slide:hover .upper-slide-layer {
   transform: translateY(0%);
   animation: smoothshow 0.3s both;
+}
+
+.numbers-display {
+  display: flex;
+  max-width: 1520px;
+  padding: 0 20px;
+  gap: 40px;
+  margin: auto;
+  align-items: end;
+  justify-content: space-between;
+  overflow: hidden;
+}
+@media (max-width: 1380px) {
+  .numbers-display {
+    max-width: 1120px;
+    gap: 32px;
+  }
+}
+@media (max-width: 720px) {
+  .numbers-display .numbers-content-container {
+    width: 100%;
+  }
+}
+.numbers-display .numbers-content-container .title-and-redirect {
+  padding: 0;
+}
+.numbers-display .numbers-content-container .numbers-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 26px;
+}
+@media (max-width: 960px) {
+  .numbers-display .numbers-content-container .numbers-grid {
+    grid-template-columns: auto auto auto;
+  }
+}
+@media (max-width: 720px) {
+  .numbers-display .numbers-content-container .numbers-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
+.numbers-display .numbers-content-container .numbers-grid .number-container {
+  display: flex;
+  flex-direction: column;
+  width: 216px;
+}
+@media (max-width: 1380px) {
+  .numbers-display .numbers-content-container .numbers-grid .number-container {
+    width: 160px;
+  }
+}
+@media (max-width: 720px) {
+  .numbers-display .numbers-content-container .numbers-grid .number-container {
+    width: 47%;
+  }
+}
+.numbers-display .numbers-content-container .numbers-grid .number-container .number {
+  font-family: "Kanit";
+  font-weight: 500;
+  font-size: 4.8rem;
+  line-height: 1.34;
+  letter-spacing: -0.4 0.8rem;
+  font-size: 6.4rem;
+  line-height: 1;
+  color: #FFBD14;
+}
+@media (max-width: 1380px) {
+  .numbers-display .numbers-content-container .numbers-grid .number-container .number {
+    font-size: 4.8rem;
+    line-height: 0.8;
+  }
+}
+.numbers-display .numbers-content-container .numbers-grid .number-container .number-subtitle {
+  font-family: "Kanit";
+  font-weight: 300;
+  font-size: 2.4rem;
+  line-height: 1.41;
+}
+@media (max-width: 1380px) {
+  .numbers-display .numbers-content-container .numbers-grid .number-container .number-subtitle {
+    font-family: "Kanit";
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 1.75;
+  }
+}
+.numbers-display .instagram-phone {
+  margin: 0 auto;
+  width: 350px;
+  height: 100%;
+}
+@media (max-width: 1380px) {
+  .numbers-display .instagram-phone {
+    width: 256px;
+  }
+}
+@media (max-width: 720px) {
+  .numbers-display .instagram-phone {
+    display: none;
+  }
 }
 
 .last-call {

@@ -65,6 +65,19 @@
                 @include Merriweather--body-light;
               }
         }
+
+        .btn-container {
+          display: flex;
+          gap: 32px;
+
+          @include xl {
+              gap: 24px;
+            }
+
+            @include md {
+              flex-direction: column;
+            }
+      }
     }
 
     .info-img{
