@@ -76,10 +76,6 @@
                             @include xl {
                                 @include Kanit--body2-bold;
                               }
-
-                              @include md {
-                                @include Kanit--body-light;
-                              }
                         }
                     }
     
@@ -96,7 +92,11 @@
                             width: 1px;
                             height: 40%;
                             background-color: $md-gray;
-    
+
+                            @include md {
+                                height: 20px;
+                                margin-right: 12px
+                              }
                         }
     
                         .author-occupation {

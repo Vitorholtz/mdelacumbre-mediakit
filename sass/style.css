@@ -1695,14 +1695,6 @@ svg {
     line-height: 1.6;
   }
 }
-@media (max-width: 720px) {
-  .testimonials-section .testimonial-container .testimonial--1 .testimonial-header .author-container .profile-box .profile-name {
-    font-family: "Kanit";
-    font-weight: 300;
-    font-size: 1.6rem;
-    line-height: 1.75;
-  }
-}
 .testimonials-section .testimonial-container .testimonial--1 .testimonial-header .author-container .occupation-box {
   display: flex;
   align-items: center;
@@ -1717,6 +1709,12 @@ svg {
   width: 1px;
   height: 40%;
   background-color: #84868A;
+}
+@media (max-width: 720px) {
+  .testimonials-section .testimonial-container .testimonial--1 .testimonial-header .author-container .occupation-box .divider {
+    height: 20px;
+    margin-right: 12px;
+  }
 }
 .testimonials-section .testimonial-container .testimonial--1 .testimonial-header .author-container .occupation-box .author-occupation {
   font-family: "Kanit";
