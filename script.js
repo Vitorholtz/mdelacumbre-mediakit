@@ -121,3 +121,39 @@ closeVideoBtn.addEventListener('click',()=>{
   videoIframe.src = ''; // Pausa o vídeo ao remover a URL
 
 })
+
+
+// TESTIMONIALS CAROUSEL
+
+let nextBtn = document.querySelector('.next-btn');
+let previousBtn = document.querySelector('.previous-btn');
+let testimonial = document.querySelectorAll('.testimonial');
+let itemAtivoIndex = -1;
+
+nextBtn.addEventListener('click', () => {
+  if (itemAtivoIndex >= 0) {
+    testimonial[itemAtivoIndex].classList.remove('t-active');
+  }
+
+  itemAtivoIndex = (itemAtivoIndex + 1) % testimonial.length;
+  testimonial[itemAtivoIndex].classList.add('t-active');
+})
+
+previousBtn.addEventListener('click', () => {
+  if (itemAtivoIndex >= 0) {
+    testimonial[itemAtivoIndex].classList.remove('t-active');
+  }
+
+  itemAtivoIndex = (itemAtivoIndex - 1 + testimonial.length) % testimonial.length;
+  testimonial[itemAtivoIndex].classList.add('t-active');
+});
+
+
+
+
+// previousBtn.addEventListener('click', () => {
+//   testimonialSlide.forEach(testimonial => {
+//     testimonial.style.transform = 'translateX(0%)';
+//   });
+
+// })

@@ -29,10 +29,17 @@
             gap: 24px;
           }
 
-          .testimonial--1 {
-            display: flex;
+          .testimonial{
+            display: none;
             flex-direction: column;
             gap: 32px;
+            opacity: 0;
+            animation: testimonials-side-effect .4s both;
+
+            &.t-active {
+              display: flex;
+              opacity: 1;
+            }
 
             @include md {
                 gap: 12px;
@@ -61,7 +68,7 @@
                             height: 72px;
                             border-radius: 50%;
                             border: 2px $md-white solid;
-                            object-fit: contain;
+                            object-fit: cover;
 
                             @include xl {
                                 width: 56px;
@@ -234,5 +241,6 @@
             }
 
           }
+
       }
 }
