@@ -1873,34 +1873,21 @@ svg {
     align-self: initial;
   }
 }
-.testimonials-section .testimonial-container .switchers-container .pagination .p-item-1,
-.testimonials-section .testimonial-container .switchers-container .pagination .p-item-2,
-.testimonials-section .testimonial-container .switchers-container .pagination .p-item-3,
-.testimonials-section .testimonial-container .switchers-container .pagination .p-item-4,
-.testimonials-section .testimonial-container .switchers-container .pagination .p-item-5,
-.testimonials-section .testimonial-container .switchers-container .pagination .p-item-6 {
+.testimonials-section .testimonial-container .switchers-container .pagination .p-item {
   width: 24px;
   height: 24px;
   border-radius: 50%;
   border: 1px #ffffff solid;
+  display: block;
+  transition: 0.3s ease;
 }
 @media (max-width: 1380px) {
-  .testimonials-section .testimonial-container .switchers-container .pagination .p-item-1,
-  .testimonials-section .testimonial-container .switchers-container .pagination .p-item-2,
-  .testimonials-section .testimonial-container .switchers-container .pagination .p-item-3,
-  .testimonials-section .testimonial-container .switchers-container .pagination .p-item-4,
-  .testimonials-section .testimonial-container .switchers-container .pagination .p-item-5,
-  .testimonials-section .testimonial-container .switchers-container .pagination .p-item-6 {
+  .testimonials-section .testimonial-container .switchers-container .pagination .p-item {
     width: 20px;
     height: 20px;
   }
 }
-.testimonials-section .testimonial-container .switchers-container .pagination .p-item-1.--active,
-.testimonials-section .testimonial-container .switchers-container .pagination .p-item-2.--active,
-.testimonials-section .testimonial-container .switchers-container .pagination .p-item-3.--active,
-.testimonials-section .testimonial-container .switchers-container .pagination .p-item-4.--active,
-.testimonials-section .testimonial-container .switchers-container .pagination .p-item-5.--active,
-.testimonials-section .testimonial-container .switchers-container .pagination .p-item-6.--active {
+.testimonials-section .testimonial-container .switchers-container .pagination .p-item.p-active {
   background-color: #FFBD14;
 }
 

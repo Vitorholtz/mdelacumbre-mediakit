@@ -128,7 +128,7 @@ closeVideoBtn.addEventListener('click',()=>{
 let nextBtn = document.querySelector('.next-btn');
 let previousBtn = document.querySelector('.previous-btn');
 let testimonial = document.querySelectorAll('.testimonial');
-let itemAtivoIndex = -1;
+let itemAtivoIndex = 0;
 
 nextBtn.addEventListener('click', () => {
   if (itemAtivoIndex >= 0) {
@@ -148,12 +148,25 @@ previousBtn.addEventListener('click', () => {
   testimonial[itemAtivoIndex].classList.add('t-active');
 });
 
+// CAROUSEL PAGINATION
 
+let pagItem = document.querySelectorAll('.p-item');
+let pagAtivoIndex = 0;
 
+nextBtn.addEventListener('click', () => {
+  if (pagAtivoIndex >= 0) {
+    pagItem[pagAtivoIndex].classList.remove('p-active');
+  }
 
-// previousBtn.addEventListener('click', () => {
-//   testimonialSlide.forEach(testimonial => {
-//     testimonial.style.transform = 'translateX(0%)';
-//   });
+  pagAtivoIndex = (pagAtivoIndex + 1) % pagItem.length;
+  pagItem[pagAtivoIndex].classList.add('p-active');
+})
 
-// })
+previousBtn.addEventListener('click', () => {
+  if (pagAtivoIndex >= 0) {
+    pagItem[pagAtivoIndex].classList.remove('p-active');
+  }
+
+  pagAtivoIndex = (pagAtivoIndex - 1 + pagItem.length) % pagItem.length;
+  pagItem[pagAtivoIndex].classList.add('p-active');
+});
