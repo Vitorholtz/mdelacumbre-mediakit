@@ -1,0 +1,34 @@
+@use "../styles" as *;
+
+
+.text-reveal-container {
+    display: flex;
+    max-width: 1520px;
+    padding: 0 20px;
+    margin: auto;
+
+    .section-title {
+      padding-left: 0;
+      padding-right: 0;
+      font-weight: 400;
+
+      span {
+        color: $md-accent-yellow;
+        &:nth-child(1) {
+          color: $md-white;
+          text-decoration: line-through;
+          font-weight: 400;
+        }
+
+        img {
+          margin: auto;
+          width: 64%;
+
+          @include md {
+            margin: inherit;
+            width: 92%;
+          }
+        }
+      }
+    }
+}

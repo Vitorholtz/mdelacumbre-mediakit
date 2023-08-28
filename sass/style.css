@@ -1476,6 +1476,36 @@ svg {
   animation: smoothshow 0.3s both;
 }
 
+.text-reveal-container {
+  display: flex;
+  max-width: 1520px;
+  padding: 0 20px;
+  margin: auto;
+}
+.text-reveal-container .section-title {
+  padding-left: 0;
+  padding-right: 0;
+  font-weight: 400;
+}
+.text-reveal-container .section-title span {
+  color: #FFBD14;
+}
+.text-reveal-container .section-title span:nth-child(1) {
+  color: #ffffff;
+  text-decoration: line-through;
+  font-weight: 400;
+}
+.text-reveal-container .section-title span img {
+  margin: auto;
+  width: 64%;
+}
+@media (max-width: 720px) {
+  .text-reveal-container .section-title span img {
+    margin: inherit;
+    width: 92%;
+  }
+}
+
 .numbers-display {
   display: flex;
   max-width: 1520px;
