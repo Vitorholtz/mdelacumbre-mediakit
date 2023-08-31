@@ -167,3 +167,43 @@
     }
 
 }
+
+// PLAY BUTTON
+
+.play-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    background-color: $md-white;
+    border-radius: 50%;
+    transition: .3s all ease;
+
+    @include xl {
+        width: 80px;
+        height: 80px;
+      }
+
+      @include md {
+        width: 56px;
+        height: 56px;
+      }
+
+    .play-icon {
+        width: 40px;
+        height: 40px;
+        padding-left: 8px;
+
+        @include xl {
+            width: 32px;
+            height: 32px;
+            padding-left: 6px;
+          }
+
+          @include md {
+            width: 24px;
+            height: 24px;
+          }
+    }
+}

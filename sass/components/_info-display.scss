@@ -8,7 +8,6 @@
     margin: 80px auto 0 auto;
     padding: 0 20px;
     gap: 64px;
-    // display: none !important;
 
     &--left {
         flex-direction: row-reverse;
@@ -80,10 +79,33 @@
       }
     }
 
-    .info-img{
+    .video-player-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 12px;
+
+      .video-title {
+        @include Kanit--h4-bold;
+
+        .video-duration {
+          padding-left: 8px;
+          @include Merriweather--body-light;
+          color: $md-gray;
+        }
+      }
+    }
+
+    .info-img,
+    .video-player{
         width: 740px;
         height: 460px;
         object-fit: cover;
+        background-color: red;
+        background: url("../assets/images/podcast-bg.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
 
         &--mobile {
           display: none;
@@ -98,7 +120,6 @@
           @include md {
             height: 160px;
           }
-
         }
 
         @include xl {
@@ -106,8 +127,64 @@
             height: 300px;
           }
 
-          @include lg {
-            display: none;
+          &.info-img {
+            @include lg {
+              display: none;
+            }
+          }
+
+          &.video-player {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid;
+            border-image: linear-gradient(to bottom, #ffffff50, rgba(255, 255, 255, 0.082)) 1;
+            transition: .3s ease;
+            cursor: pointer;
+
+            @include lg {
+              width: 100%;
+              height: 260px;
+            }
+
+            @include md {
+              height: 160px;
+            }
+            &:hover {
+              border-image: linear-gradient(to bottom, #FFBD147c, rgba(255, 255, 255, 0.082)) 1;
+              backdrop-filter: blur(0px);
+
+              .play-btn {
+                  width: 106px;
+                  height: 106px;
+                  border: 2px $md-gray solid;
+                  background-color: #0d11172d;
+
+                  @include xl {
+                      width: 64px;
+                      height: 64px;
+                    }
+
+                    @include md {
+                      width: 48px;
+                      height: 48px;
+                    }
+
+                  .play-icon {
+                      filter: invert(100);
+
+                      @include xl {
+                          width: 28px;
+                          height: 28px;
+                        }
+
+                        @include md {
+                          width: 20px;
+                          height: 20px;
+                        }
+                  }
+              }
+          }
           }
     }
 }
@@ -118,7 +195,7 @@
     opacity: 0;
     transition: .6s all ease;
   }
-  
+
 .active{
     transform: translateY(0);
     opacity: 1;
