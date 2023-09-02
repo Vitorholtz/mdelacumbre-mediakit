@@ -100,9 +100,17 @@ function smoothScrollTo(endX, endY, duration) {
 
 let playBtn = document.querySelector('.doc-video-player');
 let playBtnSecondary = document.querySelector('.secondary-button--trailer');
+let playBtnPodcast = document.querySelector('.video-player-container');
 let videoContainer = document.querySelector('.documentary-video-pop-up');
 let closeVideoBtn = document.querySelector('.close-icon');
 let videoIframe = document.querySelector('.trailer-video');
+
+playBtnPodcast.addEventListener('click',()=>{
+  videoContainer.classList.add('documentary-video-pop-up--active');
+  videoIframe.src = "https://www.youtube.com/embed/WKkGP9ZopV8?autoplay=1"; // Substitua pela URL do seu vídeo
+
+})
+
 
 playBtn.addEventListener('click',()=>{
   videoContainer.classList.add('documentary-video-pop-up--active');
