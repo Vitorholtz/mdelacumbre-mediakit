@@ -903,7 +903,7 @@ svg {
   opacity: 1;
 }
 
-.feature-display-container {
+.features-display .features-capsules-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -913,12 +913,12 @@ svg {
   margin: auto;
 }
 @media (max-width: 1380px) {
-  .feature-display-container {
+  .features-display .features-capsules-container {
     gap: 64px;
   }
 }
 @media (max-width: 720px) {
-  .feature-display-container {
+  .features-display .features-capsules-container {
     flex-wrap: nowrap;
     overflow-x: scroll;
     justify-content: left;
@@ -926,37 +926,37 @@ svg {
     padding-bottom: 20px;
   }
 }
-.feature-display-container .feature-capsule {
+.features-display .features-capsules-container .feature-capsule {
   display: flex;
   align-items: baseline;
 }
-.feature-display-container .feature-capsule:hover .arrow-down-right {
+.features-display .features-capsules-container .feature-capsule:hover .arrow-down-right {
   transform: rotate(45deg);
 }
-.feature-display-container .feature-capsule:hover .feature-icon {
+.features-display .features-capsules-container .feature-capsule:hover .feature-icon {
   stroke: #FFBD14;
 }
-.feature-display-container .feature-capsule .feature {
+.features-display .features-capsules-container .feature-capsule .feature {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.feature-display-container .feature-capsule .feature .feature-icon {
+.features-display .features-capsules-container .feature-capsule .feature .feature-icon {
   width: 78px;
   height: 78px;
   stroke-width: 0.7;
 }
 @media (max-width: 1380px) {
-  .feature-display-container .feature-capsule .feature .feature-icon {
+  .features-display .features-capsules-container .feature-capsule .feature .feature-icon {
     width: 52px;
     height: 52px;
   }
 }
-.feature-display-container .feature-capsule .feature .feature-info {
+.features-display .features-capsules-container .feature-capsule .feature .feature-info {
   display: flex;
   flex-direction: column;
 }
-.feature-display-container .feature-capsule .feature .feature-info .upper-info {
+.features-display .features-capsules-container .feature-capsule .feature .feature-info .upper-info {
   font-family: "Kanit";
   font-weight: 300;
   font-size: 2.4rem;
@@ -965,7 +965,7 @@ svg {
   line-height: 1.1;
 }
 @media (max-width: 1380px) {
-  .feature-display-container .feature-capsule .feature .feature-info .upper-info {
+  .features-display .features-capsules-container .feature-capsule .feature .feature-info .upper-info {
     font-family: "Kanit";
     font-weight: 300;
     font-size: 2rem;
@@ -973,7 +973,7 @@ svg {
     line-height: 1.1;
   }
 }
-.feature-display-container .feature-capsule .feature .feature-info .bottom-info {
+.features-display .features-capsules-container .feature-capsule .feature .feature-info .bottom-info {
   font-family: "Kanit";
   font-weight: 300;
   font-size: 4.8rem;
@@ -982,7 +982,7 @@ svg {
   line-height: 1.1;
 }
 @media (max-width: 1380px) {
-  .feature-display-container .feature-capsule .feature .feature-info .bottom-info {
+  .features-display .features-capsules-container .feature-capsule .feature .feature-info .bottom-info {
     font-family: "Kanit";
     font-weight: 300;
     font-size: 3.6rem;
@@ -990,19 +990,19 @@ svg {
     line-height: 1.1;
   }
 }
-.feature-display-container .feature-capsule .arrow-down-right {
+.features-display .features-capsules-container .feature-capsule .arrow-down-right {
   width: 48px;
   height: 48px;
   stroke-width: 1;
 }
 @media (max-width: 1380px) {
-  .feature-display-container .feature-capsule .arrow-down-right {
+  .features-display .features-capsules-container .feature-capsule .arrow-down-right {
     width: 40px;
     height: 40px;
   }
 }
 
-.books-gallery-container {
+.books-gallery .gallery-container {
   display: flex;
   justify-content: center;
   max-width: 1520px;
@@ -1011,88 +1011,88 @@ svg {
   margin: auto;
 }
 @media (max-width: 1380px) {
-  .books-gallery-container {
+  .books-gallery .gallery-container {
     max-width: 1120px;
     gap: 32px;
   }
 }
 @media (max-width: 960px) {
-  .books-gallery-container {
+  .books-gallery .gallery-container {
     flex-direction: column;
     gap: 56px;
   }
 }
-.books-gallery-container .book-display {
+.books-gallery .gallery-container .book-display {
   display: flex;
   flex-direction: column;
   gap: 24px;
   max-width: 50%;
 }
 @media (max-width: 960px) {
-  .books-gallery-container .book-display {
+  .books-gallery .gallery-container .book-display {
     max-width: 100%;
   }
 }
-.books-gallery-container .book-display .display-heading {
+.books-gallery .gallery-container .book-display .display-heading {
   display: flex;
   align-items: center;
   gap: 40px;
 }
 @media (max-width: 1380px) {
-  .books-gallery-container .book-display .display-heading {
+  .books-gallery .gallery-container .book-display .display-heading {
     gap: 32px;
   }
 }
 @media (max-width: 720px) {
-  .books-gallery-container .book-display .display-heading {
+  .books-gallery .gallery-container .book-display .display-heading {
     flex-direction: column;
     align-items: inherit;
     gap: 8px;
   }
 }
-.books-gallery-container .book-display .display-heading .book-mockup {
+.books-gallery .gallery-container .book-display .display-heading .book-mockup {
   width: 220px;
   height: 286px;
 }
 @media (max-width: 1380px) {
-  .books-gallery-container .book-display .display-heading .book-mockup {
+  .books-gallery .gallery-container .book-display .display-heading .book-mockup {
     width: 160px;
     height: 210px;
   }
 }
 @media (max-width: 720px) {
-  .books-gallery-container .book-display .display-heading .book-mockup {
+  .books-gallery .gallery-container .book-display .display-heading .book-mockup {
     align-self: center;
   }
 }
-.books-gallery-container .book-display .display-heading .book-title-container {
+.books-gallery .gallery-container .book-display .display-heading .book-title-container {
   max-width: 320px;
 }
 @media (max-width: 960px) {
-  .books-gallery-container .book-display .display-heading .book-title-container {
+  .books-gallery .gallery-container .book-display .display-heading .book-title-container {
     max-width: 400px;
   }
 }
 @media (max-width: 720px) {
-  .books-gallery-container .book-display .display-heading .book-title-container {
+  .books-gallery .gallery-container .book-display .display-heading .book-title-container {
     max-width: 100%;
   }
 }
-.books-gallery-container .book-display .display-heading .book-title-container .book-title {
+.books-gallery .gallery-container .book-display .display-heading .book-title-container .book-title {
   font-family: "Kanit";
   font-weight: 500;
   font-size: 3.6rem;
   line-height: 1.45;
 }
 @media (max-width: 720px) {
-  .books-gallery-container .book-display .display-heading .book-title-container .book-title {
+  .books-gallery .gallery-container .book-display .display-heading .book-title-container .book-title {
     font-family: "Kanit";
     font-weight: 500;
     font-size: 3.2rem;
     line-height: 1.25;
   }
 }
-.books-gallery-container .book-display .display-heading .book-title-container .book-subtitle {
+.books-gallery .gallery-container .book-display .display-heading .book-title-container .book-subtitle {
   position: relative;
   font-family: "Kanit";
   font-weight: 300;
@@ -1103,7 +1103,7 @@ svg {
   padding-left: 16px;
 }
 @media (max-width: 1380px) {
-  .books-gallery-container .book-display .display-heading .book-title-container .book-subtitle {
+  .books-gallery .gallery-container .book-display .display-heading .book-title-container .book-subtitle {
     font-family: "Kanit";
     font-weight: 300;
     font-size: 1.6rem;
@@ -1111,7 +1111,7 @@ svg {
     max-width: 300px;
   }
 }
-.books-gallery-container .book-display .display-heading .book-title-container .book-subtitle:before {
+.books-gallery .gallery-container .book-display .display-heading .book-title-container .book-subtitle:before {
   position: absolute;
   content: "";
   left: 0;
@@ -1121,26 +1121,26 @@ svg {
   background-color: #84868A;
   opacity: 0.5;
 }
-.books-gallery-container .book-display .book-description {
+.books-gallery .gallery-container .book-display .book-description {
   font-family: "Merriweather";
   font-weight: 300;
   font-size: 2rem;
   line-height: 1.8;
 }
 @media (max-width: 1380px) {
-  .books-gallery-container .book-display .book-description {
+  .books-gallery .gallery-container .book-display .book-description {
     font-family: "Merriweather";
     font-weight: 300;
     font-size: 1.6rem;
     line-height: 1.75;
   }
 }
-.books-gallery-container .book-display .primary-button {
+.books-gallery .gallery-container .book-display .primary-button {
   margin-top: auto;
   align-self: flex-start;
 }
 @media (max-width: 960px) {
-  .books-gallery-container .book-display .primary-button {
+  .books-gallery .gallery-container .book-display .primary-button {
     align-self: inherit;
   }
 }
@@ -1669,7 +1669,7 @@ svg {
   }
 }
 
-.logo-list {
+.logo-list .logos-container {
   display: flex;
   align-content: flex-start;
   justify-content: center;
@@ -1682,7 +1682,7 @@ svg {
   padding: 0 20px;
 }
 @media (max-width: 1380px) {
-  .logo-list {
+  .logo-list .logos-container {
     max-width: 1120px;
     gap: 32px;
   }
@@ -1710,74 +1710,74 @@ svg {
   }
 }
 
-.testimonials-section {
+.testimonials-section .testimonials-list-container {
   display: flex;
   max-width: 1520px;
   padding: 0 20px;
   margin: auto;
 }
 @media (max-width: 1380px) {
-  .testimonials-section {
+  .testimonials-section .testimonials-list-container {
     max-width: 1120px;
   }
 }
-.testimonials-section .testimonial-container {
+.testimonials-section .testimonials-list-container .testimonial-container {
   display: flex;
   flex-direction: column;
   gap: 48px;
   max-width: 1040px;
 }
 @media (max-width: 1380px) {
-  .testimonials-section .testimonial-container {
+  .testimonials-section .testimonials-list-container .testimonial-container {
     max-width: 832px;
   }
 }
 @media (max-width: 960px) {
-  .testimonials-section .testimonial-container {
+  .testimonials-section .testimonials-list-container .testimonial-container {
     max-width: 100%;
   }
 }
 @media (max-width: 720px) {
-  .testimonials-section .testimonial-container {
+  .testimonials-section .testimonials-list-container .testimonial-container {
     gap: 24px;
   }
 }
-.testimonials-section .testimonial-container .testimonial {
+.testimonials-section .testimonials-list-container .testimonial-container .testimonial {
   display: none;
   flex-direction: column;
   gap: 32px;
   opacity: 0;
   animation: testimonials-side-effect 0.4s both;
 }
-.testimonials-section .testimonial-container .testimonial.t-active {
+.testimonials-section .testimonials-list-container .testimonial-container .testimonial.t-active {
   display: flex;
   opacity: 1;
 }
 @media (max-width: 720px) {
-  .testimonials-section .testimonial-container .testimonial {
+  .testimonials-section .testimonials-list-container .testimonial-container .testimonial {
     gap: 12px;
   }
 }
-.testimonials-section .testimonial-container .testimonial .testimonial-header {
+.testimonials-section .testimonials-list-container .testimonial-container .testimonial .testimonial-header {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
 }
-.testimonials-section .testimonial-container .testimonial .testimonial-header .author-container {
+.testimonials-section .testimonials-list-container .testimonial-container .testimonial .testimonial-header .author-container {
   display: flex;
   gap: 20px;
 }
 @media (max-width: 720px) {
-  .testimonials-section .testimonial-container .testimonial .testimonial-header .author-container {
+  .testimonials-section .testimonials-list-container .testimonial-container .testimonial .testimonial-header .author-container {
     flex-direction: column;
   }
 }
-.testimonials-section .testimonial-container .testimonial .testimonial-header .author-container .profile-box {
+.testimonials-section .testimonials-list-container .testimonial-container .testimonial .testimonial-header .author-container .profile-box {
   display: flex;
   align-items: center;
   gap: 16px;
 }
-.testimonials-section .testimonial-container .testimonial .testimonial-header .author-container .profile-box .profile-picture {
+.testimonials-section .testimonials-list-container .testimonial-container .testimonial .testimonial-header .author-container .profile-box .profile-picture {
   width: 72px;
   height: 72px;
   border-radius: 50%;
@@ -1786,48 +1786,48 @@ svg {
      object-fit: cover;
 }
 @media (max-width: 1380px) {
-  .testimonials-section .testimonial-container .testimonial .testimonial-header .author-container .profile-box .profile-picture {
+  .testimonials-section .testimonials-list-container .testimonial-container .testimonial .testimonial-header .author-container .profile-box .profile-picture {
     width: 56px;
     height: 56px;
     border-width: 1px;
   }
 }
-.testimonials-section .testimonial-container .testimonial .testimonial-header .author-container .profile-box .profile-name {
+.testimonials-section .testimonials-list-container .testimonial-container .testimonial .testimonial-header .author-container .profile-box .profile-name {
   font-family: "Kanit";
   font-weight: 500;
   font-size: 2.4rem;
   line-height: 1.41;
 }
 @media (max-width: 1380px) {
-  .testimonials-section .testimonial-container .testimonial .testimonial-header .author-container .profile-box .profile-name {
+  .testimonials-section .testimonials-list-container .testimonial-container .testimonial .testimonial-header .author-container .profile-box .profile-name {
     font-family: "Kanit";
     font-weight: 500;
     font-size: 2rem;
     line-height: 1.6;
   }
 }
-.testimonials-section .testimonial-container .testimonial .testimonial-header .author-container .occupation-box {
+.testimonials-section .testimonials-list-container .testimonial-container .testimonial .testimonial-header .author-container .occupation-box {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 @media (max-width: 720px) {
-  .testimonials-section .testimonial-container .testimonial .testimonial-header .author-container .occupation-box {
+  .testimonials-section .testimonials-list-container .testimonial-container .testimonial .testimonial-header .author-container .occupation-box {
     gap: 0;
   }
 }
-.testimonials-section .testimonial-container .testimonial .testimonial-header .author-container .occupation-box .divider {
+.testimonials-section .testimonials-list-container .testimonial-container .testimonial .testimonial-header .author-container .occupation-box .divider {
   width: 1px;
   height: 40%;
   background-color: #84868A;
 }
 @media (max-width: 720px) {
-  .testimonials-section .testimonial-container .testimonial .testimonial-header .author-container .occupation-box .divider {
+  .testimonials-section .testimonials-list-container .testimonial-container .testimonial .testimonial-header .author-container .occupation-box .divider {
     height: 20px;
     margin-right: 12px;
   }
 }
-.testimonials-section .testimonial-container .testimonial .testimonial-header .author-container .occupation-box .author-occupation {
+.testimonials-section .testimonials-list-container .testimonial-container .testimonial .testimonial-header .author-container .occupation-box .author-occupation {
   font-family: "Kanit";
   font-weight: 300;
   font-size: 2.4rem;
@@ -1836,7 +1836,7 @@ svg {
   color: #84868A;
 }
 @media (max-width: 1380px) {
-  .testimonials-section .testimonial-container .testimonial .testimonial-header .author-container .occupation-box .author-occupation {
+  .testimonials-section .testimonials-list-container .testimonial-container .testimonial .testimonial-header .author-container .occupation-box .author-occupation {
     font-family: "Kanit";
     font-weight: 300;
     font-size: 2rem;
@@ -1844,7 +1844,7 @@ svg {
   }
 }
 @media (max-width: 720px) {
-  .testimonials-section .testimonial-container .testimonial .testimonial-header .author-container .occupation-box .author-occupation {
+  .testimonials-section .testimonials-list-container .testimonial-container .testimonial .testimonial-header .author-container .occupation-box .author-occupation {
     font-family: "Kanit";
     font-weight: 300;
     font-size: 1.6rem;
@@ -1852,25 +1852,25 @@ svg {
   }
 }
 @media (max-width: 1380px) {
-  .testimonials-section .testimonial-container .testimonial .testimonial-header .q-mark {
+  .testimonials-section .testimonials-list-container .testimonial-container .testimonial .testimonial-header .q-mark {
     width: 96px;
     height: 76px;
   }
 }
 @media (max-width: 720px) {
-  .testimonials-section .testimonial-container .testimonial .testimonial-header .q-mark {
+  .testimonials-section .testimonials-list-container .testimonial-container .testimonial .testimonial-header .q-mark {
     width: 71px;
     height: 56px;
   }
 }
-.testimonials-section .testimonial-container .testimonial .t-text-box .t-text {
+.testimonials-section .testimonials-list-container .testimonial-container .testimonial .t-text-box .t-text {
   font-family: "Merriweather";
   font-weight: 300;
   font-size: 3.2rem;
   line-height: 1.75;
 }
 @media (max-width: 1380px) {
-  .testimonials-section .testimonial-container .testimonial .t-text-box .t-text {
+  .testimonials-section .testimonials-list-container .testimonial-container .testimonial .t-text-box .t-text {
     font-family: "Merriweather";
     font-weight: 300;
     font-size: 2.4rem;
@@ -1878,35 +1878,35 @@ svg {
   }
 }
 @media (max-width: 720px) {
-  .testimonials-section .testimonial-container .testimonial .t-text-box .t-text {
+  .testimonials-section .testimonials-list-container .testimonial-container .testimonial .t-text-box .t-text {
     font-family: "Merriweather";
     font-weight: 300;
     font-size: 2rem;
     line-height: 1.8;
   }
 }
-.testimonials-section .testimonial-container .switchers-container {
+.testimonials-section .testimonials-list-container .testimonial-container .switchers-container {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 }
 @media (max-width: 720px) {
-  .testimonials-section .testimonial-container .switchers-container {
+  .testimonials-section .testimonials-list-container .testimonial-container .switchers-container {
     flex-direction: column-reverse;
     gap: 24px;
   }
 }
-.testimonials-section .testimonial-container .switchers-container .p-n-btns {
+.testimonials-section .testimonials-list-container .testimonial-container .switchers-container .p-n-btns {
   display: flex;
   gap: 32px;
 }
 @media (max-width: 480px) {
-  .testimonials-section .testimonial-container .switchers-container .p-n-btns {
+  .testimonials-section .testimonials-list-container .testimonial-container .switchers-container .p-n-btns {
     align-self: flex-end;
   }
 }
-.testimonials-section .testimonial-container .switchers-container .p-n-btns .previous-btn,
-.testimonials-section .testimonial-container .switchers-container .p-n-btns .next-btn {
+.testimonials-section .testimonials-list-container .testimonial-container .switchers-container .p-n-btns .previous-btn,
+.testimonials-section .testimonials-list-container .testimonial-container .switchers-container .p-n-btns .next-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1919,52 +1919,52 @@ svg {
   transition: all 0.2s ease;
   cursor: pointer;
 }
-.testimonials-section .testimonial-container .switchers-container .p-n-btns .previous-btn .arrow-left,
-.testimonials-section .testimonial-container .switchers-container .p-n-btns .previous-btn .arrow-right,
-.testimonials-section .testimonial-container .switchers-container .p-n-btns .next-btn .arrow-left,
-.testimonials-section .testimonial-container .switchers-container .p-n-btns .next-btn .arrow-right {
+.testimonials-section .testimonials-list-container .testimonial-container .switchers-container .p-n-btns .previous-btn .arrow-left,
+.testimonials-section .testimonials-list-container .testimonial-container .switchers-container .p-n-btns .previous-btn .arrow-right,
+.testimonials-section .testimonials-list-container .testimonial-container .switchers-container .p-n-btns .next-btn .arrow-left,
+.testimonials-section .testimonials-list-container .testimonial-container .switchers-container .p-n-btns .next-btn .arrow-right {
   width: 48px;
   height: 48px;
   stroke-width: 1;
 }
 @media (max-width: 1380px) {
-  .testimonials-section .testimonial-container .switchers-container .p-n-btns .previous-btn .arrow-left,
-  .testimonials-section .testimonial-container .switchers-container .p-n-btns .previous-btn .arrow-right,
-  .testimonials-section .testimonial-container .switchers-container .p-n-btns .next-btn .arrow-left,
-  .testimonials-section .testimonial-container .switchers-container .p-n-btns .next-btn .arrow-right {
+  .testimonials-section .testimonials-list-container .testimonial-container .switchers-container .p-n-btns .previous-btn .arrow-left,
+  .testimonials-section .testimonials-list-container .testimonial-container .switchers-container .p-n-btns .previous-btn .arrow-right,
+  .testimonials-section .testimonials-list-container .testimonial-container .switchers-container .p-n-btns .next-btn .arrow-left,
+  .testimonials-section .testimonials-list-container .testimonial-container .switchers-container .p-n-btns .next-btn .arrow-right {
     width: 40px;
     height: 40px;
   }
 }
 @media (max-width: 720px) {
-  .testimonials-section .testimonial-container .switchers-container .p-n-btns .previous-btn .arrow-left,
-  .testimonials-section .testimonial-container .switchers-container .p-n-btns .previous-btn .arrow-right,
-  .testimonials-section .testimonial-container .switchers-container .p-n-btns .next-btn .arrow-left,
-  .testimonials-section .testimonial-container .switchers-container .p-n-btns .next-btn .arrow-right {
+  .testimonials-section .testimonials-list-container .testimonial-container .switchers-container .p-n-btns .previous-btn .arrow-left,
+  .testimonials-section .testimonials-list-container .testimonial-container .switchers-container .p-n-btns .previous-btn .arrow-right,
+  .testimonials-section .testimonials-list-container .testimonial-container .switchers-container .p-n-btns .next-btn .arrow-left,
+  .testimonials-section .testimonials-list-container .testimonial-container .switchers-container .p-n-btns .next-btn .arrow-right {
     width: 32px;
     height: 32px;
   }
 }
-.testimonials-section .testimonial-container .switchers-container .p-n-btns .previous-btn:hover,
-.testimonials-section .testimonial-container .switchers-container .p-n-btns .next-btn:hover {
+.testimonials-section .testimonials-list-container .testimonial-container .switchers-container .p-n-btns .previous-btn:hover,
+.testimonials-section .testimonials-list-container .testimonial-container .switchers-container .p-n-btns .next-btn:hover {
   box-shadow: #ffffff 0px 0px 0px 2px;
   background: rgba(40, 48, 61, 0.64);
 }
-.testimonials-section .testimonial-container .switchers-container .p-n-btns .previous-btn:active,
-.testimonials-section .testimonial-container .switchers-container .p-n-btns .next-btn:active {
+.testimonials-section .testimonials-list-container .testimonial-container .switchers-container .p-n-btns .previous-btn:active,
+.testimonials-section .testimonials-list-container .testimonial-container .switchers-container .p-n-btns .next-btn:active {
   background: rgba(0, 0, 0, 0);
 }
-.testimonials-section .testimonial-container .switchers-container .pagination {
+.testimonials-section .testimonials-list-container .testimonial-container .switchers-container .pagination {
   display: flex;
   align-self: flex-end;
   gap: 16px;
 }
 @media (max-width: 480px) {
-  .testimonials-section .testimonial-container .switchers-container .pagination {
+  .testimonials-section .testimonials-list-container .testimonial-container .switchers-container .pagination {
     align-self: initial;
   }
 }
-.testimonials-section .testimonial-container .switchers-container .pagination .p-item {
+.testimonials-section .testimonials-list-container .testimonial-container .switchers-container .pagination .p-item {
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -1973,12 +1973,12 @@ svg {
   transition: 0.3s ease;
 }
 @media (max-width: 1380px) {
-  .testimonials-section .testimonial-container .switchers-container .pagination .p-item {
+  .testimonials-section .testimonials-list-container .testimonial-container .switchers-container .pagination .p-item {
     width: 20px;
     height: 20px;
   }
 }
-.testimonials-section .testimonial-container .switchers-container .pagination .p-item.p-active {
+.testimonials-section .testimonials-list-container .testimonial-container .switchers-container .pagination .p-item.p-active {
   background-color: #FFBD14;
 }
 

@@ -1,122 +1,125 @@
 @use "../styles" as *;
 
-.books-gallery-container {
-    display: flex;
-    justify-content: center;
-    max-width: 1520px;
-    gap: 40px;
-    padding: 0px 20px 0px 20px;
-    margin: auto;
-
-    @include xl {
-        max-width: 1120px;
-        gap: 32px;
-      }
-
-      @include lg {
-        flex-direction: column;
-        gap: 56px;
-      }
-
-    .book-display {
+.books-gallery {
+  
+      .gallery-container {
         display: flex;
-        flex-direction: column;
-        gap: 24px;
-        max-width: 50%;
+        justify-content: center;
+        max-width: 1520px;
+        gap: 40px;
+        padding: 0px 20px 0px 20px;
+        margin: auto;
 
-          @include lg {
-            max-width: 100%;
-          }
+        @include xl {
+          max-width: 1120px;
+          gap: 32px;
+        }
+  
+        @include lg {
+          flex-direction: column;
+          gap: 56px;
+        }
 
-        .display-heading {
+        .book-display {
             display: flex;
-            align-items: center;
-            gap: 40px;
-
-            @include xl {
-                gap: 32px;
+            flex-direction: column;
+            gap: 24px;
+            max-width: 50%;
+    
+              @include lg {
+                max-width: 100%;
               }
-
-              @include md {
-                flex-direction: column;
-                align-items: inherit;
-                gap: 8px;
-              }
-
-            .book-mockup {
-                width: 220px;
-                height: 286px;
-
+    
+            .display-heading {
+                display: flex;
+                align-items: center;
+                gap: 40px;
+    
                 @include xl {
-                    width: 160px;
-                    height: 210px;
+                    gap: 32px;
                   }
-
+    
                   @include md {
-                    align-self: center;
+                    flex-direction: column;
+                    align-items: inherit;
+                    gap: 8px;
                   }
-            }
-
-            .book-title-container {
-                max-width: 320px;
-
-                @include lg {
-                    max-width: 400px;
-                  }
-
-                  @include md {
-                    max-width: 100%;
-                  }
-
-                .book-title {
-                    @include Kanit--h2-bold;
-
-                    @include md {
-                      @include Kanit--h3-bold;
+    
+                .book-mockup {
+                    width: 220px;
+                    height: 286px;
+    
+                    @include xl {
+                        width: 160px;
+                        height: 210px;
+                      }
+    
+                      @include md {
+                        align-self: center;
+                      }
+                }
+    
+                .book-title-container {
+                    max-width: 320px;
+    
+                    @include lg {
+                        max-width: 400px;
+                      }
+    
+                      @include md {
+                        max-width: 100%;
+                      }
+    
+                    .book-title {
+                        @include Kanit--h2-bold;
+    
+                        @include md {
+                          @include Kanit--h3-bold;
+                        }
+                    }
+    
+                    .book-subtitle {
+                        position: relative;
+                        @include Kanit--body2-light;
+                        color: $md-offwhite;
+                        margin-top: 10px;
+                        padding-left: 16px;
+    
+                        @include xl {
+                            @include Kanit--body-light;
+                            max-width: 300px;
+                          }
+    
+                          &:before {
+                            position: absolute;
+                            content: '';
+                            left: 0;
+                            bottom: 3px;
+                            height: 90%;
+                            width: 2px;
+                            background-color: $md-gray;
+                            opacity: .5;
+                          }
                     }
                 }
-
-                .book-subtitle {
-                    position: relative;
-                    @include Kanit--body2-light;
-                    color: $md-offwhite;
-                    margin-top: 10px;
-                    padding-left: 16px;
-
-                    @include xl {
-                        @include Kanit--body-light;
-                        max-width: 300px;
-                      }
-
-                      &:before {
-                        position: absolute;
-                        content: '';
-                        left: 0;
-                        bottom: 3px;
-                        height: 90%;
-                        width: 2px;
-                        background-color: $md-gray;
-                        opacity: .5;
-                      }
-                }
+            }
+    
+            .book-description {
+                @include Merriweather--body2-light;
+    
+                @include xl {
+                    @include Merriweather--body-light;
+                  }
+            }
+    
+            .primary-button {
+                margin-top: auto;
+                align-self: flex-start;
+    
+                @include lg {
+                    align-self: inherit;
+                  }
             }
         }
-
-        .book-description {
-            @include Merriweather--body2-light;
-
-            @include xl {
-                @include Merriweather--body-light;
-              }
-        }
-
-        .primary-button {
-            margin-top: auto;
-            align-self: flex-start;
-
-            @include lg {
-                align-self: inherit;
-              }
-        }
-    }
+      }
 }

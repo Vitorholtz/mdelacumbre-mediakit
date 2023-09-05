@@ -1,21 +1,22 @@
 @use "../styles" as *;
 
-
 .logo-list {
-    display: flex;
-    align-content: flex-start;
-    justify-content: center;
-    align-items: center;
-    grid-column-gap: 50px;
-    grid-row-gap: 40px;
-    flex-wrap: wrap;
-    max-width: 1520px;
-    margin: auto;
-    padding: 0 20px;
-    
-    @include xl {
-        max-width: 1120px;
-        gap: 32px;
+      .logos-container {
+        display: flex;
+        align-content: flex-start;
+        justify-content: center;
+        align-items: center;
+        grid-column-gap: 50px;
+        grid-row-gap: 40px;
+        flex-wrap: wrap;
+        max-width: 1520px;
+        margin: auto;
+        padding: 0 20px;
+        
+        @include xl {
+            max-width: 1120px;
+            gap: 32px;
+          }
       }
 
     .logo-item {
